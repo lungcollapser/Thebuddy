@@ -15,6 +15,10 @@ run/main_scene="res://background.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+mouse_cursor/custom_image="res://Sprites/Aseprite/UI/Cursor/cursor1.png"
+
 [dotnet]
 
 project/assembly_name="Buddy"

@@ -13,3 +13,8 @@ position = Vector2(359, 465)
 [node name="Cursor" parent="." instance=ExtResource("2_3oslj")]
 position = Vector2(327, 435)
 scale = Vector2(1.48, 2.11999)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(396, 379)
+scale = Vector2(-374.507, -10.965)
+zoom = Vector2(1.695, 1.695)
