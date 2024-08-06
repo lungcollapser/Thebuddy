@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxmi7el41pd45"]
+
+[ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://character_body_2d.tscn" id="1_s1xu8"]
+[ext_resource type="PackedScene" uid="uid://bidre1ipjafw6" path="res://cursor.tscn" id="2_3oslj"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_s1xu8")]
+position = Vector2(359, 465)
+
+[node name="Cursor" parent="." instance=ExtResource("2_3oslj")]
+position = Vector2(327, 435)
+scale = Vector2(1.48, 2.11999)
