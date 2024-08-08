@@ -1,7 +1,7 @@
 extends Node2D
 
-var cursor1 = preload("res://Sprites/Aseprite/UI/Cursor/cursor1.png")
-var cursor2 = preload("res://Sprites/Aseprite/UI/Cursor/cursor2.png")
+var cursor1 = preload("res://Sprites/UI/cursor1.png")
+var cursor2 = preload("res://Sprites/UI/cursor2.png")
 
 ## Anim was not working so I changed functions
 ## There is a method to scaling pixel art using "nearest neighbor" that keeps it crispy but I couldnt figure it out
