@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://bidre1ipjafw6"]
+[gd_scene load_steps=3 format=3 uid="uid://bidre1ipjafw6"]
 
-[ext_resource type="Script" path="res://cursor.gd" id="1_54ne2"]
+[sub_resource type="GDScript" id="GDScript_505lp"]
+script/source = "extends Node2D
+
+var cursor1 = preload(\"res://Sprites/UI/cursor1.png\")
+var cursor2 = preload(\"res://Sprites/UI/cursor2.png\")
+var hover = false 
+
+func _process(delta):
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		Input.set_custom_mouse_cursor(cursor2, Input.CURSOR_ARROW, Vector2(0,0))
+	else: 
+		Input.set_custom_mouse_cursor(cursor1, Input.CURSOR_ARROW, Vector2(0,0))
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pmt3"]
+radius = 1.0
 
 [node name="Cursor" type="Node2D"]
-script = ExtResource("1_54ne2")
+script = SubResource("GDScript_505lp")
+
+[node name="CursorArea" type="Area2D" parent="."]
+
+[node name="CursorShape" type="CollisionShape2D" parent="CursorArea"]
+shape = SubResource("CircleShape2D_3pmt3")
