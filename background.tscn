@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bghoc6f3w7qum"]
+
+[ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://character_body_2d.tscn" id="1_krfia"]
+[ext_resource type="Texture2D" uid="uid://cv1edjgh3msqj" path="res://Sprites/Background/Scene/scene_default.png" id="1_srwhb"]
+[ext_resource type="Texture2D" uid="uid://biu08x5daqkc1" path="res://Sprites/Background/Border/border_default.png" id="3_rughx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
+normal = Vector2(0.998644, -0.052067)
+distance = -261.186
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bvgdm"]
+distance = -47.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8xxs"]
+normal = Vector2(-1, 0)
+distance = -61.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vuldx"]
+normal = Vector2(0, 1)
+distance = -132.0
+
+[node name="BACKGROUND" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(202, -14)
+rotation = 0.00863963
+shape = SubResource("WorldBoundaryShape2D_5dpc6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("WorldBoundaryShape2D_bvgdm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("WorldBoundaryShape2D_i8xxs")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 77)
+shape = SubResource("WorldBoundaryShape2D_vuldx")
+
+[node name="SceneDefault" type="Sprite2D" parent="."]
+position = Vector2(0.999996, -2)
+scale = Vector2(1.875, 1.71875)
+texture = ExtResource("1_srwhb")
+
+[node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
+position = Vector2(-2, 12)
+
+[node name="BorderDefault" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -2)
+scale = Vector2(1.85938, 1.75)
+texture = ExtResource("3_rughx")
