@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cer7p11wu1i26"
-path="res://.godot/imported/cursor.png-9207886fa5a62b74129e260ee150454e.ctex"
+uid="uid://spk3fjjox0q5"
+path="res://.godot/imported/border_default.png-d3ee33733e9280d1f4e0718472e6c65f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cursor.png"
-dest_files=["res://.godot/imported/cursor.png-9207886fa5a62b74129e260ee150454e.ctex"]
+source_file="res://Sprites/Background/Border/border_default.png"
+dest_files=["res://.godot/imported/border_default.png-d3ee33733e9280d1f4e0718472e6c65f.ctex"]
 
 [params]
 
