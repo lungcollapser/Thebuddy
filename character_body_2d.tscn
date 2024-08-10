@@ -17,3 +17,5 @@ texture = ExtResource("2_w77ak")
 [node name="Buddy1Shape" type="CollisionShape2D" parent="."]
 position = Vector2(4, 6)
 shape = SubResource("CircleShape2D_aocr4")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
