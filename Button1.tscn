@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45qcyf6yspeh"]
+
+[ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="1_reai4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpmeh"]
+size = Vector2(126, 126)
+
+[node name="Button1" type="Node2D"]
+
+[node name="ButtonSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_reai4")
+
+[node name="ButtonArea" type="Area2D" parent="."]
+
+[node name="ButtonCollision" type="CollisionShape2D" parent="ButtonArea"]
+shape = SubResource("RectangleShape2D_wpmeh")
