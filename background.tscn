@@ -55,8 +55,8 @@ scale = Vector2(1.875, 1.71875)
 texture = ExtResource("1_srwhb")
 
 [node name="BorderDefault" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, -2)
-scale = Vector2(1.85938, 1.75)
+position = Vector2(1.37496, -1.75)
+scale = Vector2(1.83203, 1.71094)
 texture = ExtResource("3_rughx")
 
 [node name="Cursor" parent="." instance=ExtResource("4_ppkf1")]
