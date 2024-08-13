@@ -5,28 +5,24 @@ script/source = "extends Node2D
 
 var cursor1 = preload(\"res://Sprites/UI/cursor1.png\")
 var cursor2 = preload(\"res://Sprites/UI/cursor2.png\")
-var cursor_anim = preload(\"res://Sprites/UI/cursor_anim.png\")
+var cursor_48x = preload(\"res://Sprites/UI/cursor_48x.png\")
 
-var cursor_hovering = false
-var anim_timer = false
+var cusor_hovering = false
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		Input.set_custom_mouse_cursor(cursor2, Input.CURSOR_ARROW, Vector2(0,0))
-	else: if cursor_hovering == true && anim_timer == true:
-		bounce_cursor()
-		anim_timer = false
+		Input.set_custom_mouse_cursor(cursor2, 0, Vector2(0,0))
 	else: if cursor_hovering == false: 
-		Input.set_custom_mouse_cursor(cursor1, Input.CURSOR_ARROW, Vector2(0,0))
-		
+		Input.set_custom_mouse_cursor(cursor1, 0, Vector2(0,0))
+
 func bounce_cursor():
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) == false:
-		Input.set_custom_mouse_cursor(cursor_anim, Input.CURSOR_ARROW, Vector2(0,0))
+	while cursor_hovering == true:
+		Input.set_custom_mouse_cursor(cursor_48x, 0, Vector2(0,0))
+		print(\"HI\")
 		await get_tree().create_timer(0.25).timeout
-		Input.set_custom_mouse_cursor(cursor1, Input.CURSOR_ARROW, Vector2(0,0))
+		Input.set_custom_mouse_cursor(cursor1, 0, Vector2(0,0))
+		print(\"BYE\")
 		await get_tree().create_timer(0.25).timeout
-	anim_timer = true
-		
 
 "
 

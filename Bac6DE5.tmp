@@ -64,7 +64,6 @@ unique_name_in_owner = true
 position = Vector2(1, -21)
 
 [node name="Button1" parent="." instance=ExtResource("5_pcdm3")]
-unique_name_in_owner = true
 position = Vector2(-91, 120)
 scale = Vector2(0.4, 0.400001)
 
