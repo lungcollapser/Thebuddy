@@ -7,7 +7,8 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 
 func _on_area_2d_mouse_entered():
 	%Cursor.cursor_hovering = true	
-	%Cursor.bounce_cursor()
+	if %Cursor.anim_timer == true:
+		%Cursor.bounce_cursor()
+		
 func _on_area_2d_mouse_exited():
 	%Cursor.cursor_hovering = false
-

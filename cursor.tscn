@@ -8,7 +8,7 @@ var cursor2 = preload(\"res://Sprites/UI/cursor2.png\")
 var cursor_anim = preload(\"res://Sprites/UI/cursor_anim.png\")
 
 var cursor_hovering = false
-var anim_timer = false
+var anim_timer = true
 
 func _physics_process(_delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
