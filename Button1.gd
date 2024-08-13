@@ -7,7 +7,7 @@ func _on_button_area_input_event(_viewport, event, _shape_idx):
 
 func _on_button_area_mouse_entered():
 	%Cursor.cursor_hovering = true	
-	if %Cursor.anim_timer == true:
+	if %Cursor.anim_timer == true: ## Checks that bounce_cursor is not already running
 		%Cursor.bounce_cursor()
 		
 func _on_button_area_mouse_exited():

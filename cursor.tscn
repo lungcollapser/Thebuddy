@@ -3,29 +3,31 @@
 [sub_resource type="GDScript" id="GDScript_505lp"]
 script/source = "extends Node2D
 
-var cursor1 = preload(\"res://Sprites/UI/cursor1.png\")
-var cursor2 = preload(\"res://Sprites/UI/cursor2.png\")
+var cursor_default = preload(\"res://Sprites/UI/cursor1.png\")
+var cursor_click = preload(\"res://Sprites/UI/cursor2.png\")
 var cursor_anim = preload(\"res://Sprites/UI/cursor_anim.png\")
 
 var cursor_hovering = false
 var anim_timer = true
 
 func _physics_process(_delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		Input.set_custom_mouse_cursor(cursor2, Input.CURSOR_ARROW, Vector2(0,0))
-	else: if cursor_hovering == true && anim_timer == true:
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT): ## Click animation
+		Input.set_custom_mouse_cursor(cursor_click, Input.CURSOR_ARROW, Vector2(0,0))
+	else: if cursor_hovering == true && anim_timer == true: ## Bounce animation
 		bounce_cursor()
-		anim_timer = false
-	else: if cursor_hovering == false: 
-		Input.set_custom_mouse_cursor(cursor1, Input.CURSOR_ARROW, Vector2(0,0))
+		anim_timer = false ## Keeps bounce_cursor() from being called again before finishing
+	else: if cursor_hovering == false: ## Sets default cursor
+		Input.set_custom_mouse_cursor(cursor_default, Input.CURSOR_ARROW, Vector2(0,0))
 		
 func bounce_cursor():
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) == false:
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) == false: ## Passes if LMB is pressed
 		Input.set_custom_mouse_cursor(cursor_anim, Input.CURSOR_ARROW, Vector2(0,0))
-		await get_tree().create_timer(0.25).timeout
-		Input.set_custom_mouse_cursor(cursor1, Input.CURSOR_ARROW, Vector2(0,0))
-		await get_tree().create_timer(0.25).timeout
-	anim_timer = true
+		await get_tree().create_timer(0.25).timeout ## 0.25 second timer
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) == false: ## Passes if LMB is pressed
+		Input.set_custom_mouse_cursor(cursor_default, Input.CURSOR_ARROW, Vector2(0,0))
+		await get_tree().create_timer(0.25).timeout ## 0.25 second timer
+	anim_timer = true ## Allows bounce_cursor to be ran again in _physics_process
+	## \"if\" loops are separate to prevent jittery anim when LMB is pressed during animation
 		
 
 "
@@ -40,5 +42,3 @@ script = SubResource("GDScript_505lp")
 
 [node name="CursorShape" type="CollisionShape2D" parent="CursorArea"]
 shape = SubResource("CircleShape2D_3pmt3")
-
-[connection signal="mouse_exited" from="CursorArea" to="." method="_on_cursor_area_mouse_exited"]
