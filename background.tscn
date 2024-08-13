@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=13 format=3 uid="uid://bghoc6f3w7qum"]
 
+[ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://character_body_2d.tscn" id="1_krfia"]
 [ext_resource type="Texture2D" uid="uid://cv1edjgh3msqj" path="res://Sprites/Background/Scene/scene_default.png" id="1_srwhb"]
 [ext_resource type="Texture2D" uid="uid://biu08x5daqkc1" path="res://Sprites/Background/Border/border_default.png" id="3_rughx"]
 [ext_resource type="PackedScene" uid="uid://bidre1ipjafw6" path="res://cursor.tscn" id="4_ppkf1"]
 [ext_resource type="PackedScene" uid="uid://b45qcyf6yspeh" path="res://Button1.tscn" id="5_pcdm3"]
 [ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res:// Button2.tscn" id="6_mv8vd"]
+[ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://Button3.tscn" id="7_xq7ys"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
 normal = Vector2(0.998644, -0.052067)
@@ -43,14 +45,14 @@ shape = SubResource("WorldBoundaryShape2D_i8xxs")
 position = Vector2(1, 77)
 shape = SubResource("WorldBoundaryShape2D_vuldx")
 
+[node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
+position = Vector2(6, 3)
+texture = ExtResource("1_drx75")
+
 [node name="SceneDefault" type="Sprite2D" parent="."]
 position = Vector2(0.999996, -2)
 scale = Vector2(1.875, 1.71875)
 texture = ExtResource("1_srwhb")
-
-[node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
-unique_name_in_owner = true
-position = Vector2(-2, 10)
 
 [node name="BorderDefault" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, -2)
@@ -68,3 +70,11 @@ scale = Vector2(0.4, 0.400001)
 [node name="Button2" parent="." instance=ExtResource("6_mv8vd")]
 position = Vector2(4, 121)
 scale = Vector2(0.396903, 0.382725)
+
+[node name="Button3" parent="." instance=ExtResource("7_xq7ys")]
+position = Vector2(90, 117)
+scale = Vector2(0.424113, 0.391883)
+
+[node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
+unique_name_in_owner = true
+position = Vector2(0, -9)

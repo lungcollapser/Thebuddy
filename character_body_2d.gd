@@ -20,5 +20,12 @@ func _jump_up():
 	
 
 	move_and_slide()
+	
+func boo():
+	%HungerText.visible = true	
 
+func reduce_hunger():
+	while hunger > 1:
+		hunger -= 1
 		
+	

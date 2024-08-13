@@ -9,8 +9,8 @@ func _on_button_area_input_event(viewport, event, shape_idx):
 		
 
 
-func _on_button_area_mouse_entered():
-	if cursor1 == cursor1:
-		Input.set_custom_mouse_cursor(cursor2, Input.CURSOR_ARROW, Vector2(0,0))
+func _on_button_area_mouse_entered(event):
+	if event is InputEventMouseMotion:
+		Input.set_default_cursor_shape(500)
 		
 	
