@@ -1,11 +1,11 @@
 extends Node2D
-class_name Button1_Bounce_Cursor
+class_name BounceCursor
 
-func _on_button_area_mouse_entered():
+func bounce_start():
 	%Cursor.cursor_hovering = true	
 	if %Cursor.anim_timer == true: ## Checks that bounce_cursor is not already running
 		%Cursor.bounce_cursor()
 		
-func _on_button_area_mouse_exited():
+func bounce_stop():
 	%Cursor.cursor_hovering = false
 

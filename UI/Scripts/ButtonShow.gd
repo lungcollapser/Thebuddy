@@ -1,4 +1,4 @@
-extends Button1_Bounce_Cursor
+extends BounceCursor
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -6,9 +6,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		%Buddy1Body.visible = true
 
 func _on_area_2d_mouse_entered():
-	%Cursor.cursor_hovering = true	
-	if %Cursor.anim_timer == true:
-		%Cursor.bounce_cursor()
+	bounce_start()
 		
 func _on_area_2d_mouse_exited():
-	%Cursor.cursor_hovering = false
+	bounce_stop()

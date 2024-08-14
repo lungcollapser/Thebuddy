@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bt3g2xjkgkb8h"]
 
-[ext_resource type="Script" path="res://Settings.gd" id="1_pccsn"]
+[ext_resource type="Script" path="res://UI/Scripts/Settings.gd" id="1_pccsn"]
 [ext_resource type="AudioStream" uid="uid://cl4gguaugxqqc" path="res://Sounds/Bouncin N Zoomin  Sam Hyde x Christ Dillinger (Prod. Danny G).mp3" id="2_ms3lo"]
 
 [node name="Settings" type="Control"]
