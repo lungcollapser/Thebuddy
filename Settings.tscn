@@ -43,16 +43,17 @@ text = "MUTE"
 layout_mode = 2
 item_count = 3
 selected = 2
-popup/item_0/text = "1920X1080"
+popup/item_0/text = "960x720"
 popup/item_0/id = 0
-popup/item_1/text = "1600x900"
+popup/item_1/text = "800x600"
 popup/item_1/id = 1
-popup/item_2/text = "1280x720"
+popup/item_2/text = "640x480"
 popup/item_2/id = 2
 
 [node name="bouncinandzoomin" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_ms3lo")
+volume_db = -20.613
 autoplay = true
 
 [connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
