@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI/Scripts/ButtonPoke.gd" id="1_ma2ru"]
 [ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="1_reai4"]
-[ext_resource type="Script" path="res://UI/Scripts/BounceCursor.gd" id="3_76fl0"]
+[ext_resource type="Script" path="res://Classes/BounceCursor.gd" id="3_76fl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpmeh"]
 size = Vector2(124, 122)
