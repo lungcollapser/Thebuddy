@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://biu08x5daqkc1" path="res://Sprites/Background/Border/border_default.png" id="3_rughx"]
 [ext_resource type="PackedScene" uid="uid://dg46pdeku2jkx" path="res://cursor.tscn" id="4_ppkf1"]
 [ext_resource type="PackedScene" uid="uid://b45qcyf6yspeh" path="res://Button1.tscn" id="5_pcdm3"]
-[ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res:// Button2.tscn" id="6_mv8vd"]
+[ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res://Button2.tscn" id="6_mv8vd"]
 [ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://Button3.tscn" id="7_xq7ys"]
 [ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://Settings.tscn" id="9_o1prj"]
 

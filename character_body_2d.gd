@@ -2,8 +2,6 @@ extends CharacterBody2D
 const JUMP_VELOCITY = -150
 const SPEED = 100
 var hunger = 100
-
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -20,10 +18,10 @@ func _jump_up():
 	
 
 	move_and_slide()
-	
+	#Allows the HungerText label to become visible. Used in the button scripts for activation. 
 func boo():
 	%HungerText.visible = true	
-
+	#The hunger function meant to reduce hunger overtime. 
 func reduce_hunger():
 	while hunger > 1:
 		hunger -= 1

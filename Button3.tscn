@@ -12,12 +12,12 @@ script = ExtResource("1_djr1s")
 [node name="ButtonSprite3" type="Sprite2D" parent="."]
 texture = ExtResource("2_dhul7")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ButtonArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonArea"]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_0xl6o")
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="ButtonArea" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="ButtonArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonArea" to="." method="_on_area_2d_mouse_exited"]

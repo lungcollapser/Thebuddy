@@ -1,4 +1,4 @@
-extends Node2D
+extends Button1_Bounce_Cursor
 
 #Code for activating the button. Works using signal from collisionshape2D
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
