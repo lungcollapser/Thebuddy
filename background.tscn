@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=14 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://character_body_2d.tscn" id="1_krfia"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b45qcyf6yspeh" path="res://Button1.tscn" id="5_pcdm3"]
 [ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res:// Button2.tscn" id="6_mv8vd"]
 [ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://Button3.tscn" id="7_xq7ys"]
+[ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://Settings.tscn" id="9_o1prj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
 normal = Vector2(0.998644, -0.052067)
@@ -79,3 +80,9 @@ scale = Vector2(0.424113, 0.391883)
 [node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
 unique_name_in_owner = true
 position = Vector2(0, -9)
+
+[node name="Settings" parent="." instance=ExtResource("9_o1prj")]
+offset_left = -415.0
+offset_top = -251.0
+offset_right = -415.0
+offset_bottom = -251.0

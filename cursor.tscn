@@ -10,8 +10,8 @@ var cursor_anim = preload(\"res://Sprites/UI/cursor_anim.png\")
 var cursor_hovering = false
 var anim_timer = true
 
-var OFFSET_X = 20
-var OFFSET_Y = 15
+const OFFSET_X = 20
+const OFFSET_Y = 15
 
 func _physics_process(_delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT): ## Click animation
