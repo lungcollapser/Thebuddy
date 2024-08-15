@@ -68,23 +68,23 @@ texture = ExtResource("3_rughx")
 unique_name_in_owner = true
 position = Vector2(1, -21)
 
-[node name="Button_Poke" parent="." instance=ExtResource("5_pcdm3")]
-unique_name_in_owner = true
-show_behind_parent = true
-position = Vector2(166, -23)
-scale = Vector2(0.6, 0.6)
+[node name="Button3" parent="." instance=ExtResource("7_xq7ys")]
+position = Vector2(255, 89)
+scale = Vector2(0.424113, 0.391883)
 
 [node name="Button2" parent="." instance=ExtResource("6_mv8vd")]
 position = Vector2(164, 90)
 scale = Vector2(0.396903, 0.382725)
 
-[node name="Button3" parent="." instance=ExtResource("7_xq7ys")]
-position = Vector2(255, 89)
-scale = Vector2(0.424113, 0.391883)
+[node name="Button_Poke" parent="." instance=ExtResource("5_pcdm3")]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(162, -22)
+scale = Vector2(0.404807, 0.386411)
 
 [node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
 unique_name_in_owner = true
-position = Vector2(163, -25)
+position = Vector2(161, -31)
 scale = Vector2(2, 2)
 
 [node name="Settings" parent="." instance=ExtResource("9_o1prj")]
