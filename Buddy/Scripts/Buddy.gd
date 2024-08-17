@@ -1,7 +1,8 @@
 extends CharacterBody2D
+class_name HungerClass
 const JUMP_VELOCITY = -150
 const SPEED = 100
-var hunger = 100
+var hunger_meter = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -11,19 +12,43 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 		
 	move_and_slide()
-#Adds a jumop function to the buddy(mainly for testing).
+#Adds a jump function to the buddy(mainly for testing).
 func _jump_up(): 
 	if is_on_floor():
 		velocity.y += JUMP_VELOCITY
 	
 
 	move_and_slide()
-	#Allows the HungerText label to become visible. Used in the button scripts for activation. 
-func boo():
-	%HungerText.visible = true	
-	#The hunger function meant to reduce hunger overtime. 
-func reduce_hunger():
-	while hunger > 1:
-		hunger -= 1
+	
+#Function for feeding the buddy. Clamp allows it to have a maximum value of 10. 
+#The print is for testing
+func feed_buddy():
+	hunger_meter += 10
+	hunger_meter = clamp(hunger_meter, 0, 30)
+	print(hunger_meter)
+	%Thanks.visible = true
+	await get_tree().create_timer(2).timeout
+	%Thanks.visible = false
+#Function for the timer to reduce the hunger meter by 1 after 1 second. 
+#The print is for testing. It also dsiplays different text after two second intervals.	
+func _on_timer_timeout():
+	hunger_meter -= 1
+	print(hunger_meter)
+	if hunger_meter == 20:
+		%Hunger75.visible = true
+		await get_tree().create_timer(2).timeout
+		%Hunger75.visible = false
+	elif hunger_meter == 13:
+		%Hunger50.visible = true
+		await get_tree().create_timer(2).timeout
+		%Hunger50.visible = false
+	elif hunger_meter == 5:
+		%Hunger25.visible = true
+		await get_tree().create_timer(2).timeout
+		%Hunger25.visible = false
+	elif hunger_meter == 0:
+		%Dead.visible = true
+			
+		
 		
 	

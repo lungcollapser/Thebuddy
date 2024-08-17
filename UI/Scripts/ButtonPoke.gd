@@ -10,5 +10,3 @@ func _on_button_area_mouse_entered():
 	
 func _on_button_area_mouse_exited():
 	bounce_stop()
-
-

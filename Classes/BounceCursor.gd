@@ -8,4 +8,3 @@ func bounce_start():
 		
 func bounce_stop():
 	%Cursor.cursor_hovering = false
-

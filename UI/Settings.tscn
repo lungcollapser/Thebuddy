@@ -41,10 +41,9 @@ text = "MUTE"
 
 [node name="Resolutions" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
-item_count = 3
 selected = 2
+item_count = 3
 popup/item_0/text = "960x720"
-popup/item_0/id = 0
 popup/item_1/text = "800x600"
 popup/item_1/id = 1
 popup/item_2/text = "640x480"

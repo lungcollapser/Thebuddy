@@ -32,7 +32,6 @@ func bounce_cursor():
 	anim_timer = true ## Allows bounce_cursor to be ran again in _physics_process
 	## \"if\" loops are separate to prevent jittery anim when LMB is pressed during animation
 		
-
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3pmt3"]

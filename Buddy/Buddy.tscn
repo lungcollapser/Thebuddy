@@ -18,13 +18,63 @@ texture = ExtResource("2_w77ak")
 [node name="Buddy1Shape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_aocr4")
 
-[node name="HungerText" type="Label" parent="."]
+[node name="Hunger75" type="Label" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = 16.0
-offset_top = -39.0
-offset_right = 56.0
-offset_bottom = -16.0
-text = "BOO!"
+offset_left = -176.0
+offset_top = -37.0
+offset_right = -18.0
+offset_bottom = -14.0
+text = "I'm decently hungry."
+
+[node name="Hunger50" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -151.0
+offset_top = -38.0
+offset_right = -16.0
+offset_bottom = -15.0
+text = "I'm pretty hungry"
+
+[node name="Hunger25" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -147.0
+offset_top = -37.0
+offset_right = -22.0
+offset_bottom = -14.0
+text = "I'm very hungry!"
+
+[node name="Dead" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -90.0
+offset_top = -41.0
+offset_right = -19.0
+offset_bottom = -18.0
+text = "I be dead"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.762
+autostart = true
+
+[node name="Thanks" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = -121.0
+offset_top = -38.0
+offset_right = -22.0
+offset_bottom = -15.0
+text = "Thank you :3"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HungerBar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 34.0
+offset_bottom = 27.0
+max_value = 30.0
+value = 30.0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Hunger75" method="_on_timer_timeout"]
