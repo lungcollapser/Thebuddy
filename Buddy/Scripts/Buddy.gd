@@ -1,8 +1,7 @@
 extends CharacterBody2D
-class_name HungerClass
 const JUMP_VELOCITY = -150
 const SPEED = 100
-var hunger_meter = 30
+var hunger_meter = 5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -33,6 +32,7 @@ func feed_buddy():
 #The print is for testing. It also dsiplays different text after two second intervals.	
 func _on_timer_timeout():
 	hunger_meter -= 1
+	hunger_meter = clamp(hunger_meter, 0, 30)
 	print(hunger_meter)
 	if hunger_meter == 20:
 		%Hunger75.visible = true
