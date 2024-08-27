@@ -90,6 +90,7 @@ scale = Vector2(2, 2)
 
 [node name="Settings" parent="." instance=ExtResource("9_o1prj")]
 unique_name_in_owner = true
+visible = false
 offset_left = -231.0
 offset_top = -221.0
 offset_right = -231.0

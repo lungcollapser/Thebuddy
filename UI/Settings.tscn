@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt3g2xjkgkb8h"]
+[gd_scene load_steps=6 format=3 uid="uid://bt3g2xjkgkb8h"]
 
 [ext_resource type="Script" path="res://UI/Scripts/Settings.gd" id="1_pccsn"]
 [ext_resource type="AudioStream" uid="uid://cl4gguaugxqqc" path="res://Sounds/Bouncin N Zoomin  Sam Hyde x Christ Dillinger (Prod. Danny G).mp3" id="2_ms3lo"]
+[ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="3_bvxih"]
+[ext_resource type="Script" path="res://UI/x_button.gd" id="3_urgei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuxvd"]
+size = Vector2(16, 12)
 
 [node name="Settings" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,7 +60,25 @@ stream = ExtResource("2_ms3lo")
 volume_db = -20.613
 autoplay = true
 
+[node name="XButton" type="Node2D" parent="."]
+script = ExtResource("3_urgei")
+
+[node name="XButtonSprite" type="Sprite2D" parent="XButton"]
+position = Vector2(108, 6)
+scale = Vector2(0.132813, 0.0976563)
+texture = ExtResource("3_bvxih")
+
+[node name="XButtonArea" type="Area2D" parent="XButton"]
+
+[node name="XButtonShape" type="CollisionShape2D" parent="XButton/XButtonArea"]
+position = Vector2(108, 6)
+shape = SubResource("RectangleShape2D_vuxvd")
+
 [connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="VBoxContainer/MuteBox" to="." method="_on_mute_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/MuteBox" to="." method="_on_check_box_toggled"]
 [connection signal="item_selected" from="VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="area_entered" from="XButton/XButtonArea" to="XButton" method="_on_x_button_area_area_entered"]
+[connection signal="input_event" from="XButton/XButtonArea" to="XButton" method="_on_x_button_area_input_event"]
+[connection signal="mouse_entered" from="XButton/XButtonArea" to="XButton" method="_on_x_button_area_mouse_entered"]
+[connection signal="mouse_exited" from="XButton/XButtonArea" to="XButton" method="_on_x_button_area_mouse_exited"]
