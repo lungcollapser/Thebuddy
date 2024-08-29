@@ -4,7 +4,7 @@
 
 [sub_resource type="GDScript" id="GDScript_xahko"]
 script/source = "extends BounceCursor
-func _on_x_button_area_2_input_event(viewport: Node, event: InputEvent, shape_idx: int):
+func _on_x_button_area_2_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		%Settings.visible = false
 		%XButton.visible = false
@@ -21,27 +21,22 @@ func _on_x_button_area_2_mouse_exited():
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojdp0"]
-size = Vector2(16, 12)
+size = Vector2(20, 17)
 
 [node name="XButton" type="Node2D"]
-visible = false
 script = SubResource("GDScript_xahko")
 
 [node name="XButtonSprite2" type="Sprite2D" parent="."]
-position = Vector2(108, 6)
-scale = Vector2(0.132813, 0.0976563)
+position = Vector2(109.75, 8.375)
+scale = Vector2(0.160157, 0.134766)
 texture = ExtResource("1_if6ef")
 
 [node name="XButtonArea2" type="Area2D" parent="."]
 
 [node name="XButtonShape" type="CollisionShape2D" parent="XButtonArea2"]
-position = Vector2(108, 6)
+position = Vector2(110, 8.5)
 shape = SubResource("RectangleShape2D_ojdp0")
 
-[connection signal="area_entered" from="XButtonArea" to="." method="_on_x_button_area_area_entered"]
-[connection signal="input_event" from="XButtonArea" to="." method="_on_x_button_area_input_event"]
-[connection signal="mouse_entered" from="XButtonArea" to="." method="_on_x_button_area_mouse_entered"]
-[connection signal="mouse_exited" from="XButtonArea" to="." method="_on_x_button_area_mouse_exited"]
 [connection signal="input_event" from="XButtonArea2" to="." method="_on_x_button_area_2_input_event"]
 [connection signal="mouse_entered" from="XButtonArea2" to="." method="_on_x_button_area_2_mouse_entered"]
 [connection signal="mouse_exited" from="XButtonArea2" to="." method="_on_x_button_area_2_mouse_exited"]
