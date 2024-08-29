@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=16 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://UI/ButtonShow.tscn" id="7_xq7ys"]
 [ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://UI/Settings.tscn" id="9_o1prj"]
 [ext_resource type="PackedScene" uid="uid://dlobmc4yyvjao" path="res://UI/SettingsButton.tscn" id="10_7fv0k"]
+[ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://UI/x_button.tscn" id="11_sefs5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
 normal = Vector2(0.998644, -0.052067)
@@ -84,7 +85,6 @@ position = Vector2(162, -22)
 scale = Vector2(0.404807, 0.386411)
 
 [node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
-unique_name_in_owner = true
 position = Vector2(161, -31)
 scale = Vector2(2, 2)
 
@@ -100,3 +100,7 @@ metadata/_edit_use_anchors_ = true
 [node name="SettingsButton" parent="." instance=ExtResource("10_7fv0k")]
 position = Vector2(-287, -203)
 scale = Vector2(0.520002, 0.559999)
+
+[node name="XButton" parent="." instance=ExtResource("11_sefs5")]
+unique_name_in_owner = true
+position = Vector2(-231, -219)
