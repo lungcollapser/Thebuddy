@@ -10,8 +10,8 @@ size = Vector2(123, 122)
 script = ExtResource("1_rylbf")
 
 [node name="SettingsButtonSprite" type="Sprite2D" parent="."]
-position = Vector2(0.9375, -0.562501)
-scale = Vector2(0.243861, 0.247772)
+position = Vector2(2.86102e-06, 0.500001)
+scale = Vector2(0.383901, 0.386792)
 texture = ExtResource("2_wnvtn")
 
 [node name="SettingsButtonArea" type="Area2D" parent="."]
