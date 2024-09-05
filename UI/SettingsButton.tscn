@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlobmc4yyvjao"]
 
 [ext_resource type="Script" path="res://UI/Scripts/settings_button.gd" id="1_rylbf"]
-[ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="2_rnat5"]
+[ext_resource type="Texture2D" uid="uid://b13khdgrw0ptf" path="res://Sprites/UI/settingsplaceholder.png" id="2_wnvtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd1mb"]
 size = Vector2(123, 122)
@@ -10,7 +10,9 @@ size = Vector2(123, 122)
 script = ExtResource("1_rylbf")
 
 [node name="SettingsButtonSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_rnat5")
+position = Vector2(0.9375, -0.562501)
+scale = Vector2(0.243861, 0.247772)
+texture = ExtResource("2_wnvtn")
 
 [node name="SettingsButtonArea" type="Area2D" parent="."]
 
