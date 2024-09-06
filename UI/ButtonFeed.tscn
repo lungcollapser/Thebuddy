@@ -4,20 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://cu2y87whxowg4" path="res://Sprites/UI/button_feed.png" id="2_fuakg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owwum"]
-size = Vector2(158.25, 158.875)
+size = Vector2(63.7813, 63.8594)
 
 [node name="Button2" type="Node2D"]
 script = ExtResource("1_cuu1g")
 
 [node name="ButtonSprite" type="Sprite2D" parent="."]
-position = Vector2(0.625013, 1.62501)
-scale = Vector2(5, 5)
+scale = Vector2(2, 2)
 texture = ExtResource("2_fuakg")
 
 [node name="ButtonArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonArea"]
-position = Vector2(0, 1)
+position = Vector2(0.109375, 0.0703125)
 shape = SubResource("RectangleShape2D_owwum")
 
 [connection signal="input_event" from="ButtonArea" to="." method="_on_area_2d_input_event"]
