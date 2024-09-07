@@ -98,7 +98,7 @@ offset_bottom = -221.0
 metadata/_edit_use_anchors_ = true
 
 [node name="SettingsButton" parent="." instance=ExtResource("10_7fv0k")]
-position = Vector2(-287, -203)
+position = Vector2(-282, -196)
 scale = Vector2(0.520002, 0.559999)
 
 [node name="XButton" parent="." instance=ExtResource("11_sefs5")]
