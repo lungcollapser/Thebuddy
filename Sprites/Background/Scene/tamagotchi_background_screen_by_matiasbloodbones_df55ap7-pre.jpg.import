@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dudrix5uq0vkw"
-path="res://.godot/imported/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg-8b31f0dc349917cf796aad2719933582.ctex"
+path="res://.godot/imported/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg-6068c84d2cd2ae9f05df26616a6fe509.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg"
-dest_files=["res://.godot/imported/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg-8b31f0dc349917cf796aad2719933582.ctex"]
+source_file="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg"
+dest_files=["res://.godot/imported/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg-6068c84d2cd2ae9f05df26616a6fe509.ctex"]
 
 [params]
 
