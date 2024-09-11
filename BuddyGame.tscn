@@ -88,6 +88,7 @@ position = Vector2(162, -22)
 scale = Vector2(0.404807, 0.386411)
 
 [node name="ButtonFeed" parent="." instance=ExtResource("6_mv8vd")]
+unique_name_in_owner = true
 position = Vector2(105, 103)
 
 [node name="Button3" parent="." instance=ExtResource("7_xq7ys")]

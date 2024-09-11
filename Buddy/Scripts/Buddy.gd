@@ -23,14 +23,22 @@ func _jump_up():
 #Function for feeding the buddy. Clamp allows it to have a maximum value of 10. 
 #The print is for testing
 func feed_buddy():
-	hunger_meter += 10
 	hunger_meter = clamp(hunger_meter, 0, 30)
-	print(hunger_meter)
-	%Thanks.visible = true
-	await get_tree().create_timer(2).timeout
-	%Thanks.visible = false
+	if hunger_meter < 20:
+		hunger_meter += 10
+	
+func full_buddy():
+	if hunger_meter >= 20:
+		%Full.visible = true
+		await get_tree().create_timer(2).timeout
+		%Full.visible = false
+		
+func dead_buddy():
+	if hunger_meter == 0:
+		pass
+	
 
-#This is a seperate lose hunger function. We call this at the end of _on_timer_timeout to reduce the hunger overtime and show the labels.
+#This is a seperate lose hunger awsda. We call this at the end of _on_timer_timeout to reduce the hunger overtime and show the labels.
 #The print is for testing.
 func lose_hunger():
 	hunger_meter -= 1

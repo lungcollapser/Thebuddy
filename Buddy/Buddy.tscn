@@ -58,14 +58,15 @@ text = "I be dead"
 wait_time = 1.762
 autostart = true
 
-[node name="Thanks" type="Label" parent="."]
+[node name="Full" type="Label" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = -121.0
-offset_top = -38.0
-offset_right = -22.0
-offset_bottom = -15.0
-text = "Thank you :3"
+offset_left = -128.0
+offset_top = -66.0
+offset_right = 59.0
+offset_bottom = -17.0
+text = "Im full now, 
+thank you:3"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
