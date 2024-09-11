@@ -67,28 +67,6 @@ offset_right = -22.0
 offset_bottom = -15.0
 text = "Thank you :3"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HungerBar" type="ProgressBar" parent="CanvasLayer"]
-unique_name_in_owner = true
-offset_left = 531.0
-offset_top = 40.0
-offset_right = 599.0
-offset_bottom = 67.0
-max_value = 30.0
-step = 1.0
-value = 30.0
-show_percentage = false
-
-[node name="HungerBarTxt" type="Label" parent="CanvasLayer"]
-offset_left = 535.0
-offset_top = 46.0
-offset_right = 596.0
-offset_bottom = 62.0
-theme_override_font_sizes/font_size = 9
-text = "Hunger Meter"
-
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Hunger75" method="_on_timer_timeout"]
-[connection signal="value_changed" from="CanvasLayer/HungerBar" to="CanvasLayer/HungerBar" method="_on_value_changed"]

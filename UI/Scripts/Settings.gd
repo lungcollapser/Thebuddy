@@ -18,3 +18,8 @@ func _on_resolutions_item_selected(index):
 			DisplayServer.window_set_size(Vector2i(800, 600))
 		2:
 			DisplayServer.window_set_size(Vector2i(640, 480))
+
+
+
+func _on_quit_pressed():
+	get_tree().quit()
