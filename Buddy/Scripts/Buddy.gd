@@ -58,7 +58,6 @@ func _on_timer_timeout():
 		await get_tree().create_timer(2).timeout
 		%Dead.visible = false
 		queue_free()
-
-	
+		
 	lose_hunger()
 	
