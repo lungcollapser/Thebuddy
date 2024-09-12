@@ -62,10 +62,8 @@ func _on_timer_timeout():
 		await get_tree().create_timer(2).timeout
 		%Dead.visible = false
 		
-	dead_buddy()
+
 	lose_hunger()
 	
 		
-func dead_buddy():
-	if hunger_meter == 0:
-		process_mode = %ButtonFeed.PROCESS_MODE_DISABLED
+		
