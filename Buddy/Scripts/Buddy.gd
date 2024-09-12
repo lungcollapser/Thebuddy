@@ -1,7 +1,7 @@
 extends CharacterBody2D
 const JUMP_VELOCITY = -150
 const SPEED = 100
-var hunger_meter = 1
+var hunger_meter = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -59,11 +59,6 @@ func _on_timer_timeout():
 		%Hunger25.visible = false
 	elif hunger_meter == 0:
 		%Dead.visible = true
-		await get_tree().create_timer(2).timeout
-		%Dead.visible = false
 		
-
 	lose_hunger()
 	
-		
-		
