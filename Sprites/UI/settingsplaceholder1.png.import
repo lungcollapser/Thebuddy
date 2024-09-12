@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pyfe3wpoksut"
-path="res://.godot/imported/buddy_anim.png-6afa30baf7b37738cf3f4fd54721f400.ctex"
+uid="uid://ce5c85ktqkw0s"
+path="res://.godot/imported/settingsplaceholder1.png-7622852f218efdc41bff115c0c9127fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buddy/buddy_anim.png"
-dest_files=["res://.godot/imported/buddy_anim.png-6afa30baf7b37738cf3f4fd54721f400.ctex"]
+source_file="res://Sprites/UI/settingsplaceholder1.png"
+dest_files=["res://.godot/imported/settingsplaceholder1.png-7622852f218efdc41bff115c0c9127fe.ctex"]
 
 [params]
 
