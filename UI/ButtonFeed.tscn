@@ -9,16 +9,17 @@ size = Vector2(63.7813, 63.8594)
 [node name="Button2" type="Node2D"]
 script = ExtResource("1_cuu1g")
 
-[node name="ButtonSprite" type="Sprite2D" parent="."]
+[node name="FeedButtonSprite" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_fuakg")
 
-[node name="ButtonArea" type="Area2D" parent="."]
+[node name="FeedButtonArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonArea"]
+[node name="FeedButtonShape" type="CollisionShape2D" parent="FeedButtonArea"]
+unique_name_in_owner = true
 position = Vector2(0.109375, 0.0703125)
 shape = SubResource("RectangleShape2D_owwum")
 
-[connection signal="input_event" from="ButtonArea" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="ButtonArea" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="ButtonArea" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="FeedButtonArea" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="FeedButtonArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="FeedButtonArea" to="." method="_on_area_2d_mouse_exited"]

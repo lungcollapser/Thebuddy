@@ -5,7 +5,11 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		%Buddy1Body.feed_buddy()
 		%Buddy1Body.full_buddy()
-		
+
+func _process(delta):
+	set_process(true)
+
+
 func _on_area_2d_mouse_entered():
 	bounce_start()
 		

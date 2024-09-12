@@ -1,7 +1,7 @@
 extends CharacterBody2D
 const JUMP_VELOCITY = -150
 const SPEED = 100
-var hunger_meter = 30
+var hunger_meter = 1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
@@ -28,15 +28,11 @@ func feed_buddy():
 		hunger_meter += 10
 	
 func full_buddy():
-	if hunger_meter >= 20:
+	if hunger_meter >= 25:
 		%Full.visible = true
 		await get_tree().create_timer(2).timeout
 		%Full.visible = false
 		
-func dead_buddy():
-	if hunger_meter == 0:
-		pass
-	
 
 #This is a seperate lose hunger awsda. We call this at the end of _on_timer_timeout to reduce the hunger overtime and show the labels.
 #The print is for testing.
@@ -65,7 +61,11 @@ func _on_timer_timeout():
 		%Dead.visible = true
 		await get_tree().create_timer(2).timeout
 		%Dead.visible = false
-		queue_free()
 		
+	dead_buddy()
 	lose_hunger()
 	
+		
+func dead_buddy():
+	if hunger_meter == 0:
+		process_mode = %ButtonFeed.PROCESS_MODE_DISABLED
