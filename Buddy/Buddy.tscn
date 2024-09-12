@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://ca1uerg8uy26a"]
 
 [ext_resource type="Script" path="res://Buddy/Scripts/Buddy.gd" id="1_crrf2"]
-[ext_resource type="Texture2D" uid="uid://cjhr36q813qio" path="res://Sprites/Buddy/buddy_anim2.png" id="2_tx1a7"]
+[ext_resource type="Texture2D" uid="uid://dy4n7iew8up18" path="res://Sprites/Buddy/buddy_anim.png" id="2_unohm"]
 
 [sub_resource type="Animation" id="Animation_mtok8"]
 resource_name = "HandsUp"
@@ -124,7 +124,7 @@ script = ExtResource("1_crrf2")
 [node name="Budd1Sprite" type="Sprite2D" parent="."]
 position = Vector2(-1, -3)
 scale = Vector2(1.84375, 1.60547)
-texture = ExtResource("2_tx1a7")
+texture = ExtResource("2_unohm")
 hframes = 4
 
 [node name="HandsUp" type="AnimationPlayer" parent="."]
