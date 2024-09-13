@@ -21,19 +21,19 @@ func _on_x_button_area_2_mouse_exited():
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojdp0"]
+size = Vector2(64, 64)
 
 [node name="XButton" type="Node2D"]
 script = SubResource("GDScript_xahko")
 
 [node name="XButtonSprite2" type="Sprite2D" parent="."]
-position = Vector2(113, 10)
-scale = Vector2(0.625, 0.625)
+position = Vector2(32, 32)
 texture = ExtResource("1_cgk14")
 
 [node name="XButtonArea2" type="Area2D" parent="."]
 
 [node name="XButtonShape" type="CollisionShape2D" parent="XButtonArea2"]
-position = Vector2(113, 10)
+position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_ojdp0")
 
 [connection signal="input_event" from="XButtonArea2" to="." method="_on_x_button_area_2_input_event"]

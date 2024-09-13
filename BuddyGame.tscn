@@ -63,7 +63,7 @@ position = Vector2(163, -74)
 shape = SubResource("WorldBoundaryShape2D_vuldx")
 
 [node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
-position = Vector2(1.5229e-05, 3.93391e-06)
+position = Vector2(5.00002, 3.93391e-06)
 scale = Vector2(0.715884, 0.536913)
 texture = ExtResource("1_drx75")
 
@@ -101,7 +101,6 @@ scale = Vector2(2, 2)
 
 [node name="Settings" parent="." instance=ExtResource("9_o1prj")]
 unique_name_in_owner = true
-visible = false
 offset_left = -231.0
 offset_top = -221.0
 offset_right = -231.0
@@ -110,5 +109,5 @@ metadata/_edit_use_anchors_ = true
 
 [node name="XButton" parent="." instance=ExtResource("11_sefs5")]
 unique_name_in_owner = true
-visible = false
-position = Vector2(-231, -219)
+position = Vector2(-127, -215)
+scale = Vector2(0.25, 0.25)
