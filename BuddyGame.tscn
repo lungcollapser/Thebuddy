@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=17 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://UI/Settings.tscn" id="9_o1prj"]
 [ext_resource type="PackedScene" uid="uid://dlobmc4yyvjao" path="res://UI/SettingsButton.tscn" id="10_7fv0k"]
 [ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://UI/x_button.tscn" id="11_sefs5"]
+[ext_resource type="PackedScene" uid="uid://c3gtmsg0h57fv" path="res://UI/ShopButton.tscn" id="12_5g2m1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
 normal = Vector2(0.998644, -0.052067)
@@ -113,3 +114,7 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(-127, -215)
 scale = Vector2(0.25, 0.25)
+
+[node name="ShopButton" parent="." instance=ExtResource("12_5g2m1")]
+position = Vector2(-27, -170)
+scale = Vector2(-0.53641, 0.535608)

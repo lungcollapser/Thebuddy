@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b63q3astssidg"]
+
+[ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_oavyf"]
+
+[node name="ShopScene" type="Node2D"]
+
+[node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
+position = Vector2(338, 233)
+texture = ExtResource("1_oavyf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 304.0
+offset_top = 29.0
+offset_right = 348.0
+offset_bottom = 52.0
+text = "SHOP"
