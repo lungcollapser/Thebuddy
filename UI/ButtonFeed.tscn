@@ -20,6 +20,6 @@ unique_name_in_owner = true
 position = Vector2(0.109375, 0.0703125)
 shape = SubResource("RectangleShape2D_owwum")
 
-[connection signal="input_event" from="FeedButtonArea" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="FeedButtonArea" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="FeedButtonArea" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="FeedButtonArea" to="." method="_on_feed_button_area_input_event"]
+[connection signal="mouse_entered" from="FeedButtonArea" to="." method="_on_feed_button_area_mouse_entered"]
+[connection signal="mouse_exited" from="FeedButtonArea" to="." method="_on_feed_button_area_mouse_exited"]
