@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b63q3astssidg"]
+[gd_scene load_steps=9 format=3 uid="uid://b63q3astssidg"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_oavyf"]
 [ext_resource type="Script" path="res://UI/Scripts/hat_beret_shop.gd" id="2_8ml1q"]
 [ext_resource type="Texture2D" uid="uid://u63ipxrni6gn" path="res://Sprites/Buddy/Hats/hat_beret.png" id="3_nhlwj"]
 [ext_resource type="Script" path="res://UI/Scripts/hat_bowl_shop.gd" id="4_gm5w1"]
 [ext_resource type="Texture2D" uid="uid://cyxiygp5g83jk" path="res://Sprites/Buddy/Hats/hat_bowl.png" id="5_ttx4y"]
+[ext_resource type="PackedScene" uid="uid://dahe2ld028258" path="res://UI/ShopBackButton.tscn" id="6_ae1eo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gam5"]
 radius = 25.0
@@ -53,6 +54,10 @@ texture = ExtResource("5_ttx4y")
 [node name="HatBowlShape" type="CollisionShape2D" parent="HatBowlShop/HatBowlArea"]
 position = Vector2(402, 91)
 shape = SubResource("CircleShape2D_25osg")
+
+[node name="ShopBackButton" parent="." instance=ExtResource("6_ae1eo")]
+position = Vector2(42, 31)
+scale = Vector2(0.408228, 0.332615)
 
 [connection signal="mouse_entered" from="HatBeretShop/HatBeretSprite/HatBeretArea" to="HatBeretShop" method="_on_hat_beret_area_mouse_entered"]
 [connection signal="mouse_exited" from="HatBeretShop/HatBeretSprite/HatBeretArea" to="HatBeretShop" method="_on_hat_beret_area_mouse_exited"]
