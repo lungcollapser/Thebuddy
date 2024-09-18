@@ -37,10 +37,15 @@ metadata/_edit_vertical_guides_ = [486.0]
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="SettingsButton" parent="CanvasLayer" instance=ExtResource("10_7fv0k")]
-position = Vector2(45, 45)
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 77.0
+offset_bottom = 77.0
 scale = Vector2(0.75, 0.75)
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

@@ -108,8 +108,8 @@ position = Vector2(48, 117.5)
 shape = SubResource("RectangleShape2D_ivlr7")
 
 [connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
-[connection signal="toggled" from="VBoxContainer/MuteBox" to="." method="_on_check_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/MuteBox" to="." method="_on_mute_box_toggled"]
+[connection signal="toggled" from="VBoxContainer/MuteBox" to="." method="_on_check_box_toggled"]
 [connection signal="item_selected" from="VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
 [connection signal="pressed" from="VBoxContainer/MiniPlayer" to="." method="_on_mini_player_pressed"]
 [connection signal="pressed" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_pressed"]

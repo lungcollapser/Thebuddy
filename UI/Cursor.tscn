@@ -12,3 +12,6 @@ script = ExtResource("1_rhjvj")
 
 [node name="CursorShape" type="CollisionShape2D" parent="CursorArea"]
 shape = SubResource("CircleShape2D_3pmt3")
+
+[connection signal="call_bounce_start" from="." to="." method="_on_call_bounce_start"]
+[connection signal="call_bounce_stop" from="." to="." method="_on_call_bounce_stop"]
