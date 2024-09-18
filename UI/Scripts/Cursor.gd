@@ -4,12 +4,6 @@ extends Node2D
 @export var cursor_click = ViewportTexture
 @export var cursor_anim = ViewportTexture
 
-
-
-#var cursor_default = preload("res://Sprites/UI/cursor1.png")
-#var cursor_click = preload("res://Sprites/UI/cursor2.png")
-#var cursor_anim = preload("res://Sprites/UI/cursor_anim.png")
-
 var cursor_hovering = false
 var anim_timer = true
 
@@ -19,7 +13,6 @@ const OFFSET_Y = 15
 func _ready():
 	Events.connect("call_bounce_start", Callable(self, "bounce_start"))
 	Events.connect("call_bounce_stop", Callable(self, "bounce_stop"))
-	
 	
 
 func _physics_process(_delta):
@@ -40,16 +33,6 @@ func bounce_cursor():
 		await get_tree().create_timer(0.25).timeout ## 0.25 second timer
 	anim_timer = true ## Allows bounce_cursor to be ran again in _physics_process
 	## "if" loops are separate to prevent jittery anim when LMB is pressed during animation
-	
-
-
-func _on_call_bounce_start():
-	bounce_start()
-	
-	
-	
-func _on_call_bounce_stop():
-	bounce_stop()
 	
 
 
