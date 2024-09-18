@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cixf4rbbgokdr"]
+
+[ext_resource type="Script" path="res://events.gd" id="1_okdia"]
+
+[node name="Events" type="Node"]
+script = ExtResource("1_okdia")

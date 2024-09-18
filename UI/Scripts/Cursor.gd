@@ -1,22 +1,26 @@
 extends Node2D
 
-#@export var cursor_default = ViewportTexture
-#@export var cursor_click = ViewportTexture
-#@export var cursor_anim = ViewportTexture
-
-signal call_bounce_start
-signal call_bounce_stop
+@export var cursor_default = ViewportTexture
+@export var cursor_click = ViewportTexture
+@export var cursor_anim = ViewportTexture
 
 
-var cursor_default = preload("res://Sprites/UI/cursor1.png")
-var cursor_click = preload("res://Sprites/UI/cursor2.png")
-var cursor_anim = preload("res://Sprites/UI/cursor_anim.png")
+
+#var cursor_default = preload("res://Sprites/UI/cursor1.png")
+#var cursor_click = preload("res://Sprites/UI/cursor2.png")
+#var cursor_anim = preload("res://Sprites/UI/cursor_anim.png")
 
 var cursor_hovering = false
 var anim_timer = true
 
 const OFFSET_X = 20
 const OFFSET_Y = 15
+
+func _ready():
+	Events.connect("call_bounce_start", Callable(self, "bounce_start"))
+	Events.connect("call_bounce_stop", Callable(self, "bounce_stop"))
+	
+	
 
 func _physics_process(_delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT): ## Click animation
@@ -41,20 +45,20 @@ func bounce_cursor():
 
 func _on_call_bounce_start():
 	bounce_start()
-	print("cock")
+	
 	
 	
 func _on_call_bounce_stop():
 	bounce_stop()
-	print("cock")
+	
 
 
 func bounce_start():
-	Cursor.cursor_hovering = true	
-	if Cursor.anim_timer == true: ## Checks that bounce_cursor is not already running
-		Cursor.bounce_cursor()
+	cursor_hovering = true	
+	if anim_timer == true: ## Checks that bounce_cursor is not already running
+		bounce_cursor()
 		
 func bounce_stop():
-	Cursor.cursor_hovering = false
+	cursor_hovering = false
 	
 	
