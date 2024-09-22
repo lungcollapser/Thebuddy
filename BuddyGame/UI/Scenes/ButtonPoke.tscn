@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45qcyf6yspeh"]
+
+[ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="1_bb28p"]
+[ext_resource type="Script" path="res://BuddyGame/UI/Scripts/ButtonPoke.gd" id="1_ma2ru"]
+
+[node name="ButtonPoke" type="TextureButton"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("1_bb28p")
+stretch_mode = 0
+script = ExtResource("1_ma2ru")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

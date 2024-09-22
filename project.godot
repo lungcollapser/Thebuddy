@@ -17,7 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< Updated upstream
 GlobalCursor="*res://UI/Scripts/Cursor.gd"
+=======
+Events="*res://BuddyGame/Events/EventsScripts/events.gd"
+>>>>>>> Stashed changes
 
 [display]
 
@@ -27,7 +31,7 @@ window/size/mode=3
 window/size/resizable=false
 window/size/extend_to_title=true
 window/stretch/mode="canvas_items"
-mouse_cursor/custom_image="res://Sprites/Aseprite/UI/Cursor/cursor1.png"
+mouse_cursor/custom_image="res://BuddyGame/Assets/Sprites/Sprites/Aseprite/UI/Cursor/cursor1.png"
 
 [dotnet]
 

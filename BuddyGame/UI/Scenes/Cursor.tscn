@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg46pdeku2jkx"]
+
+<<<<<<< Updated upstream:UI/Cursor.tscn
+[ext_resource type="Script" path="res://UI/Scripts/Cursor.gd" id="1_rhjvj"]
+=======
+[ext_resource type="Script" path="res://BuddyGame/UI/Scripts/Cursor.gd" id="1_rhjvj"]
+[ext_resource type="Texture2D" uid="uid://ebentcwmdkpv" path="res://BuddyGame/UI/Sprites/cursor1.png" id="2_4dvcx"]
+[ext_resource type="Texture2D" uid="uid://c2g56w4a5sn5p" path="res://BuddyGame/UI/Sprites/cursor2.png" id="3_rl88o"]
+[ext_resource type="Texture2D" uid="uid://5jvish756jo3" path="res://BuddyGame/UI/Sprites/cursor_anim.png" id="4_wld16"]
+>>>>>>> Stashed changes:BuddyGame/UI/Scenes/Cursor.tscn
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pmt3"]
+radius = 1.0
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_rhjvj")
+
+[node name="CursorArea" type="Area2D" parent="."]
+
+[node name="CursorShape" type="CollisionShape2D" parent="CursorArea"]
+shape = SubResource("CircleShape2D_3pmt3")

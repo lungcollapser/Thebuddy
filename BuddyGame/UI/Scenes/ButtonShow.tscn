@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt1tp7mtrou3j"]
+
+[ext_resource type="Script" path="res://BuddyGame/UI/Scripts/ButtonShow.gd" id="1_djr1s"]
+[ext_resource type="Texture2D" uid="uid://dfcsts8frpri8" path="res://BuddyGame/UI/Sprites/button_default.png" id="1_x12rh"]
+
+[node name="ButtonShow" type="TextureButton"]
+texture_normal = ExtResource("1_x12rh")
+script = ExtResource("1_djr1s")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

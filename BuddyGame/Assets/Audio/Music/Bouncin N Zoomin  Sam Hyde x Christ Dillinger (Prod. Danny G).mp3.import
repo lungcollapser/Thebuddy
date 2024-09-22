@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl4gguaugxqqc"
+path="res://.godot/imported/Bouncin N Zoomin  Sam Hyde x Christ Dillinger (Prod. Danny G).mp3-006d4798e2bd319fd2c9429b9b8521f5.mp3str"
+
+[deps]
+
+source_file="res://BuddyGame/Assets/Audio/Music/Bouncin N Zoomin  Sam Hyde x Christ Dillinger (Prod. Danny G).mp3"
+dest_files=["res://.godot/imported/Bouncin N Zoomin  Sam Hyde x Christ Dillinger (Prod. Danny G).mp3-006d4798e2bd319fd2c9429b9b8521f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
