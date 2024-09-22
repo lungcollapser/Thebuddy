@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg46pdeku2jkx"]
+
+[ext_resource type="Script" path="res://UI/Scripts/Cursor.gd" id="1_rhjvj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pmt3"]
+radius = 1.0
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_rhjvj")
+
+[node name="CursorArea" type="Area2D" parent="."]
+
+[node name="CursorShape" type="CollisionShape2D" parent="CursorArea"]
+shape = SubResource("CircleShape2D_3pmt3")

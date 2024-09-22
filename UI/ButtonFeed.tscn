@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://de5mkfn0p7nur"]
+
+[ext_resource type="Script" path="res://UI/Scripts/ButtonFeed.gd" id="1_cuu1g"]
+[ext_resource type="Texture2D" uid="uid://cu2y87whxowg4" path="res://Sprites/UI/button_feed.png" id="2_fuakg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owwum"]
+size = Vector2(63.7813, 63.8594)
+
+[node name="Button2" type="Node2D"]
+script = ExtResource("1_cuu1g")
+
+[node name="FeedButtonSprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_fuakg")
+
+[node name="FeedButtonArea" type="Area2D" parent="."]
+
+[node name="FeedButtonShape" type="CollisionShape2D" parent="FeedButtonArea"]
+unique_name_in_owner = true
+position = Vector2(0.109375, 0.0703125)
+shape = SubResource("RectangleShape2D_owwum")
+
+[connection signal="input_event" from="FeedButtonArea" to="." method="_on_feed_button_area_input_event"]
+[connection signal="mouse_entered" from="FeedButtonArea" to="." method="_on_feed_button_area_mouse_entered"]
+[connection signal="mouse_exited" from="FeedButtonArea" to="." method="_on_feed_button_area_mouse_exited"]

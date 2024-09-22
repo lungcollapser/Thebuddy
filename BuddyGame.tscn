@@ -1,20 +1,32 @@
-[gd_scene load_steps=14 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=17 format=3 uid="uid://bghoc6f3w7qum"]
 
-[ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://BuddyGame/Assets/Sprites/Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
-[ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://BuddyGame/Scenes/Buddy.tscn" id="1_krfia"]
-[ext_resource type="PackedScene" uid="uid://cv4uumpyi0duj" path="res://BuddyGame/UI/Scenes/MasterButton.tscn" id="1_q5g2q"]
-[ext_resource type="Texture2D" uid="uid://cv1edjgh3msqj" path="res://BuddyGame/Assets/Sprites/Sprites/Background/Scene/scene_default.png" id="1_srwhb"]
-[ext_resource type="Texture2D" uid="uid://biu08x5daqkc1" path="res://BuddyGame/Assets/Sprites/Sprites/Background/Border/border_default.png" id="3_rughx"]
-[ext_resource type="PackedScene" uid="uid://dg46pdeku2jkx" path="res://BuddyGame/UI/Scenes/Cursor.tscn" id="4_ppkf1"]
-[ext_resource type="PackedScene" uid="uid://b45qcyf6yspeh" path="res://BuddyGame/UI/Scenes/ButtonPoke.tscn" id="5_pcdm3"]
-[ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res://BuddyGame/UI/Scenes/ButtonFeed.tscn" id="6_mv8vd"]
-[ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://BuddyGame/UI/Scenes/ButtonShow.tscn" id="7_xq7ys"]
-[ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://BuddyGame/UI/Scenes/Settings.tscn" id="9_o1prj"]
-[ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://BuddyGame/UI/Scenes/x_button.tscn" id="11_sefs5"]
-[ext_resource type="PackedScene" uid="uid://c3gtmsg0h57fv" path="res://BuddyGame/UI/Scenes/ShopButton.tscn" id="12_5g2m1"]
+[ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
+[ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
+[ext_resource type="Texture2D" uid="uid://cv1edjgh3msqj" path="res://Sprites/Background/Scene/scene_default.png" id="1_srwhb"]
+[ext_resource type="Texture2D" uid="uid://biu08x5daqkc1" path="res://Sprites/Background/Border/border_default.png" id="3_rughx"]
+[ext_resource type="PackedScene" uid="uid://dg46pdeku2jkx" path="res://UI/Cursor.tscn" id="4_ppkf1"]
+[ext_resource type="PackedScene" uid="uid://b45qcyf6yspeh" path="res://UI/ButtonPoke.tscn" id="5_pcdm3"]
+[ext_resource type="PackedScene" uid="uid://de5mkfn0p7nur" path="res://UI/ButtonFeed.tscn" id="6_mv8vd"]
+[ext_resource type="PackedScene" uid="uid://dt1tp7mtrou3j" path="res://UI/ButtonShow.tscn" id="7_xq7ys"]
+[ext_resource type="PackedScene" uid="uid://bt3g2xjkgkb8h" path="res://UI/Settings.tscn" id="9_o1prj"]
+[ext_resource type="PackedScene" uid="uid://dlobmc4yyvjao" path="res://UI/SettingsButton.tscn" id="10_7fv0k"]
+[ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://UI/x_button.tscn" id="11_sefs5"]
+[ext_resource type="PackedScene" uid="uid://c3gtmsg0h57fv" path="res://UI/ShopButton.tscn" id="12_5g2m1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
+normal = Vector2(0.998644, -0.052067)
+distance = -264.185
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bvgdm"]
 distance = -47.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8xxs"]
+normal = Vector2(-1, 0)
+distance = -61.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vuldx"]
+normal = Vector2(0, 1)
+distance = -132.0
 
 [node name="BACKGROUND" type="Node2D"]
 position = Vector2(320, 240)
@@ -26,22 +38,30 @@ metadata/_edit_vertical_guides_ = [486.0]
 offset_right = 40.0
 offset_bottom = 40.0
 
-<<<<<<< Updated upstream
 [node name="SettingsButton" parent="CanvasLayer" instance=ExtResource("10_7fv0k")]
 position = Vector2(45, 45)
 scale = Vector2(0.75, 0.75)
-=======
-[node name="SettingsButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_q5g2q")]
-layout_mode = 2
->>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(307, -91)
+rotation = 0.00863963
+shape = SubResource("WorldBoundaryShape2D_5dpc6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(164, -25)
 shape = SubResource("WorldBoundaryShape2D_bvgdm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(227, -74)
+shape = SubResource("WorldBoundaryShape2D_i8xxs")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(163, -74)
+shape = SubResource("WorldBoundaryShape2D_vuldx")
 
 [node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
 position = Vector2(2.00007, 3.93391e-06)
@@ -58,40 +78,26 @@ position = Vector2(166, -87)
 scale = Vector2(4, 4)
 texture = ExtResource("3_rughx")
 
-[node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
-unique_name_in_owner = true
-position = Vector2(162, -32)
-scale = Vector2(2, 2)
-
 [node name="Cursor" parent="." instance=ExtResource("4_ppkf1")]
 position = Vector2(1, -21)
 
 [node name="ButtonPoke" parent="." instance=ExtResource("5_pcdm3")]
 unique_name_in_owner = true
 show_behind_parent = true
-offset_left = 139.0
-offset_top = -37.0
-offset_right = 267.0
-offset_bottom = 91.0
+position = Vector2(162, -22)
 scale = Vector2(0.404807, 0.386411)
 
 [node name="ButtonFeed" parent="." instance=ExtResource("6_mv8vd")]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(64, 64)
-offset_left = 49.0
-offset_top = 73.0
-offset_right = 113.0
-offset_bottom = 137.0
-stretch_mode = 0
+position = Vector2(105, 103)
 
-[node name="ButtonShow" parent="." instance=ExtResource("7_xq7ys")]
-custom_minimum_size = Vector2(64, 64)
-offset_left = 198.0
-offset_top = 73.0
-offset_right = 262.0
-offset_bottom = 137.0
-stretch_mode = 0
-flip_h = true
+[node name="Button3" parent="." instance=ExtResource("7_xq7ys")]
+position = Vector2(226, 103)
+
+[node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
+unique_name_in_owner = true
+position = Vector2(161, -31)
+scale = Vector2(2, 2)
 
 [node name="Settings" parent="." instance=ExtResource("9_o1prj")]
 unique_name_in_owner = true
@@ -105,18 +111,9 @@ metadata/_edit_use_anchors_ = true
 [node name="XButton" parent="." instance=ExtResource("11_sefs5")]
 unique_name_in_owner = true
 visible = false
-offset_left = -127.0
-offset_top = -215.0
-offset_right = -127.0
-offset_bottom = -215.0
+position = Vector2(-127, -215)
 scale = Vector2(0.25, 0.25)
 
 [node name="ShopButton" parent="." instance=ExtResource("12_5g2m1")]
-offset_left = -84.0
-offset_top = -158.0
-offset_right = 44.0
-offset_bottom = -30.0
-scale = Vector2(0.62, 0.62)
-stretch_mode = 0
-
-[connection signal="button_down" from="ButtonPoke" to="CanvasLayer/HBoxContainer/SettingsButton" method="_on_button_poke_button_down"]
+position = Vector2(-27, -170)
+scale = Vector2(-0.53641, 0.535608)
