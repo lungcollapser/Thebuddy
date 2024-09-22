@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=16 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
@@ -23,10 +23,6 @@ distance = -47.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8xxs"]
 normal = Vector2(-1, 0)
 distance = -61.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vuldx"]
-normal = Vector2(0, 1)
-distance = -132.0
 
 [node name="BACKGROUND" type="Node2D"]
 position = Vector2(320, 240)
@@ -58,10 +54,6 @@ shape = SubResource("WorldBoundaryShape2D_bvgdm")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(227, -74)
 shape = SubResource("WorldBoundaryShape2D_i8xxs")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(163, -74)
-shape = SubResource("WorldBoundaryShape2D_vuldx")
 
 [node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
 position = Vector2(2.00007, 3.93391e-06)
