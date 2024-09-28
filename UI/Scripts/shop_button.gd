@@ -1,15 +1,15 @@
-extends BounceCursor
+extends TextureButton
 
 
-func _on_shop_button_area_mouse_entered():
-	bounce_start()
+func _on_mouse_entered():
+	Events.emit_signal("call_bounce_start")
+	
+	
+
+func _on_mouse_exited():
+	Events.emit_signal("call_bounce_stop")
 
 
-func _on_shop_button_area_mouse_exited():
-	bounce_stop()
 
-
-
-func _on_shop_button_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		get_tree().change_scene_to_file("res://UI/ShopScene.tscn")
+func _on_button_down():
+	get_tree().change_scene_to_file("res://UI/ShopScene.tscn")

@@ -1,26 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b45qcyf6yspeh"]
+[gd_scene load_steps=3 format=3 uid="uid://b45qcyf6yspeh"]
 
 [ext_resource type="Script" path="res://UI/Scripts/ButtonPoke.gd" id="1_ma2ru"]
 [ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="1_reai4"]
-[ext_resource type="Script" path="res://Classes/BounceCursor.gd" id="3_76fl0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpmeh"]
-size = Vector2(124, 122)
-
-[node name="Button1" type="Node2D"]
+[node name="ButtonPoke" type="TextureButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("1_reai4")
 script = ExtResource("1_ma2ru")
 
-[node name="PokeButtonSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_reai4")
-
-[node name="PokeButtonArea" type="Area2D" parent="."]
-
-[node name="PokeButtonCollision" type="CollisionShape2D" parent="PokeButtonArea"]
-shape = SubResource("RectangleShape2D_wpmeh")
-
-[node name="ButtonBounceCursorClass" type="Node2D" parent="."]
-script = ExtResource("3_76fl0")
-
-[connection signal="input_event" from="PokeButtonArea" to="." method="_on_button_area_input_event"]
-[connection signal="mouse_entered" from="PokeButtonArea" to="." method="_on_poke_button_area_mouse_entered"]
-[connection signal="mouse_exited" from="PokeButtonArea" to="." method="_on_poke_button_area_mouse_exited"]
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

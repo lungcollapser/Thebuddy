@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=14 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
@@ -13,16 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://UI/x_button.tscn" id="11_sefs5"]
 [ext_resource type="PackedScene" uid="uid://c3gtmsg0h57fv" path="res://UI/ShopButton.tscn" id="12_5g2m1"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5dpc6"]
-normal = Vector2(0.998644, -0.052067)
-distance = -264.185
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bvgdm"]
 distance = -47.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8xxs"]
-normal = Vector2(-1, 0)
-distance = -61.0
 
 [node name="BACKGROUND" type="Node2D"]
 position = Vector2(320, 240)
@@ -35,25 +27,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SettingsButton" parent="CanvasLayer" instance=ExtResource("10_7fv0k")]
-position = Vector2(45, 45)
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 45.0
+offset_bottom = 45.0
 scale = Vector2(0.75, 0.75)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(307, -91)
-rotation = 0.00863963
-shape = SubResource("WorldBoundaryShape2D_5dpc6")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(164, -25)
 shape = SubResource("WorldBoundaryShape2D_bvgdm")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(227, -74)
-shape = SubResource("WorldBoundaryShape2D_i8xxs")
 
 [node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
 position = Vector2(2.00007, 3.93391e-06)
@@ -76,15 +62,24 @@ position = Vector2(1, -21)
 [node name="ButtonPoke" parent="." instance=ExtResource("5_pcdm3")]
 unique_name_in_owner = true
 show_behind_parent = true
-position = Vector2(162, -22)
+offset_left = 162.0
+offset_top = -22.0
+offset_right = 170.0
+offset_bottom = -14.0
 scale = Vector2(0.404807, 0.386411)
 
 [node name="ButtonFeed" parent="." instance=ExtResource("6_mv8vd")]
 unique_name_in_owner = true
-position = Vector2(105, 103)
+offset_left = 108.0
+offset_top = 70.0
+offset_right = 140.0
+offset_bottom = 102.0
 
 [node name="Button3" parent="." instance=ExtResource("7_xq7ys")]
-position = Vector2(226, 103)
+offset_left = 212.0
+offset_top = 69.0
+offset_right = 340.0
+offset_bottom = 197.0
 
 [node name="Buddy1Body" parent="." instance=ExtResource("1_krfia")]
 unique_name_in_owner = true
@@ -103,9 +98,15 @@ metadata/_edit_use_anchors_ = true
 [node name="XButton" parent="." instance=ExtResource("11_sefs5")]
 unique_name_in_owner = true
 visible = false
-position = Vector2(-127, -215)
+offset_left = -127.0
+offset_top = -215.0
+offset_right = -127.0
+offset_bottom = -215.0
 scale = Vector2(0.25, 0.25)
 
 [node name="ShopButton" parent="." instance=ExtResource("12_5g2m1")]
-position = Vector2(-27, -170)
+offset_left = 4.0
+offset_top = -193.0
+offset_right = 132.0
+offset_bottom = -65.0
 scale = Vector2(-0.53641, 0.535608)
