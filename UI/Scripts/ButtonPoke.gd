@@ -12,4 +12,4 @@ func _on_mouse_exited():
 
 
 func _on_button_down():
-	%Buddy1Body.jump_up()
+	%Buddy1Body._jump_up()
