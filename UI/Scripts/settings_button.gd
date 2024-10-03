@@ -1,6 +1,5 @@
-extends TextureButton
+extends Events
 
-		
 
 func _on_mouse_entered():
 	Events.emit_signal("call_bounce_start")

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/Scripts/shop_button.gd" id="1_dyg36"]
 [ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="2_pydpd"]
 
-[node name="ButtonShop" type="TextureButton"]
+[node name="ButtonShop" type="TextureButton" groups=["Bounce"]]
 texture_normal = ExtResource("2_pydpd")
 script = ExtResource("1_dyg36")
 

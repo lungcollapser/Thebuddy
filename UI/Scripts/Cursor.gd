@@ -11,10 +11,10 @@ const OFFSET_X = 20
 const OFFSET_Y = 15
 
 
-
-func _process(delta: float):
+func _ready() -> void:
 	Events.connect("call_bounce_start", Callable(self, "bounce_start"))
 	Events.connect("call_bounce_stop", Callable(self, "bounce_stop"))
+	
 
 
 func _physics_process(_delta):
@@ -38,9 +38,9 @@ func bounce_cursor():
 
 
 func bounce_start():
-	GlobalCursor.cursor_hovering = true	
-	if GlobalCursor.anim_timer == true: ## Checks that bounce_cursor is not already running
-		GlobalCursor.bounce_cursor()
+		GlobalCursor.cursor_hovering = true	
+		if GlobalCursor.anim_timer == true: ## Checks that bounce_cursor is not already running
+			GlobalCursor.bounce_cursor()
 		
 func bounce_stop():
-	GlobalCursor.cursor_hovering = false
+		GlobalCursor.cursor_hovering = false
