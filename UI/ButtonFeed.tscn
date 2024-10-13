@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cu2y87whxowg4" path="res://Sprites/UI/button_feed.png" id="2_fuakg"]
 
 [node name="ButtonFeed" type="TextureButton"]
+scale = Vector2(1.785, 1.785)
 texture_normal = ExtResource("2_fuakg")
 script = ExtResource("1_cuu1g")
 
