@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/Scripts/settings_button.gd" id="1_rylbf"]
 [ext_resource type="Texture2D" uid="uid://dnqerhtetyeny" path="res://Sprites/UI/settingsplaceholder2.png" id="2_qxhky"]
 
-[node name="SettingsButton" type="TextureButton"]
+[node name="SettingsButton" type="TextureButton" groups=["bounce"]]
 texture_normal = ExtResource("2_qxhky")
 script = ExtResource("1_rylbf")
 

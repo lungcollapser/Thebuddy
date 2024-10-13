@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bghoc6f3w7qum"]
+[gd_scene load_steps=15 format=3 uid="uid://bghoc6f3w7qum"]
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_drx75"]
 [ext_resource type="PackedScene" uid="uid://ca1uerg8uy26a" path="res://Buddy/Buddy.tscn" id="1_krfia"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dlobmc4yyvjao" path="res://UI/SettingsButton.tscn" id="10_7fv0k"]
 [ext_resource type="PackedScene" uid="uid://dy3sfmk1gcjg2" path="res://UI/x_button.tscn" id="11_sefs5"]
 [ext_resource type="PackedScene" uid="uid://c3gtmsg0h57fv" path="res://UI/ShopButton.tscn" id="12_5g2m1"]
+[ext_resource type="PackedScene" uid="uid://b63q3astssidg" path="res://UI/ShopScene.tscn" id="13_kgjv0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bvgdm"]
 distance = -47.0
@@ -109,3 +110,6 @@ offset_top = -193.0
 offset_right = 132.0
 offset_bottom = -65.0
 scale = Vector2(-0.53641, 0.535608)
+
+[node name="ShopScene" parent="." instance=ExtResource("13_kgjv0")]
+position = Vector2(520, -56)

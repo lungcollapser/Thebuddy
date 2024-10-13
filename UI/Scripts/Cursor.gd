@@ -3,6 +3,7 @@ extends Node2D
 var cursor_default = preload("res://Sprites/UI/cursor1.png")
 var cursor_click = preload("res://Sprites/UI/cursor2.png")
 var cursor_anim = preload("res://Sprites/UI/cursor_anim.png")
+@onready var cursor = $"."
 
 var cursor_hovering = false
 var anim_timer = true
@@ -11,7 +12,7 @@ const OFFSET_X = 20
 const OFFSET_Y = 15
 
 
-func _ready() -> void:
+func _ready():
 	Events.connect("call_bounce_start", Callable(self, "bounce_start"))
 	Events.connect("call_bounce_stop", Callable(self, "bounce_stop"))
 	
@@ -38,9 +39,9 @@ func bounce_cursor():
 
 
 func bounce_start():
-		GlobalCursor.cursor_hovering = true	
-		if GlobalCursor.anim_timer == true: ## Checks that bounce_cursor is not already running
-			GlobalCursor.bounce_cursor()
+		cursor.cursor_hovering = true	
+		if cursor.anim_timer == true: ## Checks that bounce_cursor is not already running
+			cursor.bounce_cursor()
 		
 func bounce_stop():
-		GlobalCursor.cursor_hovering = false
+		cursor.cursor_hovering = false
