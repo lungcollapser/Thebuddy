@@ -3,14 +3,16 @@ const JUMP_VELOCITY = -300
 const SPEED = 100
 var hunger_meter = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@onready var hands_up_animation = $HandsUpAnimation
-@onready var hands_down_animation = $HandsDownAnimation
+@onready var idle_animation = $IdleAnimation
+@onready var blink_animation = $BlinkAnimation
 
 
 #Adds the gravity to the scene.
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	idle_animation.play("IdleAnimation")
+	
 		
 	move_and_slide()
 #Adds a jump function to the buddy(mainly for testing).
