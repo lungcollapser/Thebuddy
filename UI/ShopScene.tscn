@@ -26,7 +26,7 @@ offset_left = 375.0
 offset_top = 80.0
 offset_right = 407.0
 offset_bottom = 112.0
-scale = Vector2(2.015, 2.015)
+scale = Vector2(2.48641, 2.735)
 texture_normal = ExtResource("2_p3qkx")
 script = ExtResource("2_8ml1q")
 
@@ -35,7 +35,7 @@ offset_left = 244.0
 offset_top = 83.0
 offset_right = 276.0
 offset_bottom = 115.0
-scale = Vector2(2.015, 2.015)
+scale = Vector2(2.815, 2.9484)
 texture_normal = ExtResource("4_0g8ji")
 script = ExtResource("4_gm5w1")
 
