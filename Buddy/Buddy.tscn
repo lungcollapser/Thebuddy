@@ -3,9 +3,10 @@
 [ext_resource type="Script" path="res://Buddy/Scripts/Buddy.gd" id="1_crrf2"]
 [ext_resource type="Texture2D" uid="uid://dy4n7iew8up18" path="res://Sprites/Background/Scene/Buddy/buddy_anim.png" id="2_unohm"]
 [ext_resource type="Texture2D" uid="uid://u63ipxrni6gn" path="res://Sprites/Background/Scene/Buddy/Hats/hat_beret.png" id="3_2y0lr"]
+[ext_resource type="Texture2D" uid="uid://cyxiygp5g83jk" path="res://Sprites/Background/Scene/Buddy/Hats/hat_bowl.png" id="3_xrrgr"]
 
-[sub_resource type="Animation" id="Animation_mtok8"]
-resource_name = "HandsUp"
+[sub_resource type="Animation" id="Animation_f7etr"]
+resource_name = "IdleAnimation"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,49 +14,13 @@ tracks/0/path = NodePath("Budd1Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [3]
+"values": [3, 0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_rwj8b"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Budd1Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l0o1n"]
-_data = {
-"HandsUp": SubResource("Animation_mtok8"),
-"RESET": SubResource("Animation_rwj8b")
-}
-
-[sub_resource type="Animation" id="Animation_2birr"]
-resource_name = "HandsDown"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Budd1Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_t64vi"]
+[sub_resource type="Animation" id="Animation_ayw3a"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -70,54 +35,101 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_m2xjk"]
+[sub_resource type="Animation" id="Animation_uiqas"]
+resource_name = "HandsUpAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Budd1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jpnki"]
+resource_name = "HandsDownAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Budd1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3vdn"]
 _data = {
-"HandsDown": SubResource("Animation_2birr"),
-"RESET": SubResource("Animation_t64vi")
+"HandsDownAnimation": SubResource("Animation_jpnki"),
+"HandsUpAnimation": SubResource("Animation_uiqas"),
+"IdleAnimation": SubResource("Animation_f7etr"),
+"RESET": SubResource("Animation_ayw3a")
+}
+
+[sub_resource type="Animation" id="Animation_m0nbo"]
+resource_name = "IdleAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Budd1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_rkfxc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Budd1Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_masba"]
+_data = {
+"IdleAnimation": SubResource("Animation_m0nbo"),
+"RESET": SubResource("Animation_rkfxc")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aocr4"]
 radius = 24.0208
 
-[sub_resource type="Animation" id="Animation_dky5b"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Budd1Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_wvv8l"]
-resource_name = "jump"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Budd1Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [3, 2, 1, 0, 3, 2, 1, 0, 3, 2, 1, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_y5wke"]
-_data = {
-"RESET": SubResource("Animation_dky5b"),
-"jump": SubResource("Animation_wvv8l")
-}
-
-[node name="Buddy" type="CharacterBody2D" groups=["Buddy"]]
+[node name="Buddy" type="CharacterBody2D"]
 position = Vector2(438, 171)
 script = ExtResource("1_crrf2")
+
+[node name="HandsDownAnimation" type="AnimationPlayer" parent="." groups=["HandsDown"]]
+libraries = {
+"": SubResource("AnimationLibrary_x3vdn")
+}
+
+[node name="HandsUpAnimation" type="AnimationPlayer" parent="." groups=["HandsUp"]]
+libraries = {
+"": SubResource("AnimationLibrary_x3vdn")
+}
+
+[node name="IdleAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_masba")
+}
 
 [node name="Budd1Sprite" type="Sprite2D" parent="."]
 position = Vector2(-1, -3)
@@ -125,24 +137,9 @@ scale = Vector2(1.84375, 1.60547)
 texture = ExtResource("2_unohm")
 hframes = 4
 
-[node name="HandsUp" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_l0o1n")
-}
-
-[node name="HandsDown" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_m2xjk")
-}
-
 [node name="Buddy1Shape" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 1)
 shape = SubResource("CircleShape2D_aocr4")
-
-[node name="JumpAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_y5wke")
-}
 
 [node name="Hunger75" type="Label" parent="."]
 unique_name_in_owner = true
@@ -194,11 +191,17 @@ offset_bottom = -17.0
 text = "Im full now, 
 thank you:3"
 
-[node name="HatBeret" type="Sprite2D" parent="."]
+[node name="HatBeretBuddy" type="Sprite2D" parent="." groups=["HatBeretBuddy"]]
 visible = false
 position = Vector2(-1, -5)
 scale = Vector2(1.53125, 1.5)
 texture = ExtResource("3_2y0lr")
+
+[node name="HatBowlBuddy" type="Sprite2D" parent="." groups=["HatBowlBuddy"]]
+visible = false
+position = Vector2(1, -3)
+scale = Vector2(1.41768, 1.79541)
+texture = ExtResource("3_xrrgr")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Hunger75" method="_on_timer_timeout"]

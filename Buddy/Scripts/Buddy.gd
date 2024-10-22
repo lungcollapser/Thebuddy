@@ -3,9 +3,8 @@ const JUMP_VELOCITY = -300
 const SPEED = 100
 var hunger_meter = 30
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@onready var jump_animation = $JumpAnimation
-@onready var hands_up_animation = $HandsUp
-@onready var hands_down_animation = $HandsDown
+@onready var hands_up_animation = $HandsUpAnimation
+@onready var hands_down_animation = $HandsDownAnimation
 
 
 #Adds the gravity to the scene.
@@ -18,16 +17,8 @@ func _physics_process(delta):
 func _jump_up(): 
 	if is_on_floor():
 		velocity.y += JUMP_VELOCITY
-		jump_animation.play("jump")
 	move_and_slide()
 
-func _on_poke_area_mouse_entered():
-	hands_up_animation.play("HandsUp")
-
-
-func _on_poke_area_mouse_exited():
-	hands_down_animation.play("HandsDown")
-	 
 
 #-------------------------------------------------------------------------------
 
