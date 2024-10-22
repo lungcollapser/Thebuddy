@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_oavyf"]
 [ext_resource type="Script" path="res://UI/Scripts/hat_beret_shop.gd" id="2_8ml1q"]
-[ext_resource type="Texture2D" uid="uid://py5be2ugmvxn" path="res://Sprites/Buddy/Hats/Store/hat_beret_store.png" id="2_p3qkx"]
-[ext_resource type="Texture2D" uid="uid://hv6s404grnc8" path="res://Sprites/Buddy/Hats/Store/hat_bowl_store.png" id="4_0g8ji"]
+[ext_resource type="Texture2D" uid="uid://py5be2ugmvxn" path="res://Sprites/Background/Scene/Buddy/Hats/Store/hat_beret_store.png" id="2_p3qkx"]
+[ext_resource type="Texture2D" uid="uid://hv6s404grnc8" path="res://Sprites/Background/Scene/Buddy/Hats/Store/hat_bowl_store.png" id="4_0g8ji"]
 [ext_resource type="Script" path="res://UI/Scripts/hat_bowl_shop.gd" id="4_gm5w1"]
 [ext_resource type="PackedScene" uid="uid://dahe2ld028258" path="res://UI/ShopBackButton.tscn" id="6_ae1eo"]
 [ext_resource type="Texture2D" uid="uid://db60w81j6iiko" path="res://icon.svg" id="7_eax1f"]
@@ -47,6 +47,7 @@ offset_bottom = 31.0
 scale = Vector2(0.408228, 0.332615)
 texture_normal = ExtResource("7_eax1f")
 
+[connection signal="button_down" from="HatBeretShop" to="HatBeretShop" method="_on_button_down"]
 [connection signal="mouse_entered" from="HatBeretShop" to="HatBeretShop" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="HatBeretShop" to="HatBeretShop" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="HatBowlShop" to="HatBowlShop" method="_on_mouse_entered"]

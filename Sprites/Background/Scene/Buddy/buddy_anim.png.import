@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy4n7iew8up18"
-path="res://.godot/imported/buddy_anim.png-6afa30baf7b37738cf3f4fd54721f400.ctex"
+path="res://.godot/imported/buddy_anim.png-92f465c454f184a9284246ad68b37972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buddy/buddy_anim.png"
-dest_files=["res://.godot/imported/buddy_anim.png-6afa30baf7b37738cf3f4fd54721f400.ctex"]
+source_file="res://Sprites/Background/Scene/Buddy/buddy_anim.png"
+dest_files=["res://.godot/imported/buddy_anim.png-92f465c454f184a9284246ad68b37972.ctex"]
 
 [params]
 

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://byad5pag8gmpf"]
+
+[ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_w2lry"]
+[ext_resource type="Texture2D" uid="uid://u63ipxrni6gn" path="res://Sprites/Background/Scene/Buddy/Hats/hat_beret.png" id="2_ufv3s"]
+[ext_resource type="Texture2D" uid="uid://cyxiygp5g83jk" path="res://Sprites/Background/Scene/Buddy/Hats/hat_bowl.png" id="3_41n0w"]
+
+[node name="InventoryScene" type="Node2D"]
+
+[node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
+position = Vector2(222, 179)
+scale = Vector2(0.131991, 0.217002)
+texture = ExtResource("1_w2lry")
+
+[node name="InventoryLabel" type="Label" parent="."]
+offset_left = 176.0
+offset_top = 90.0
+offset_right = 267.0
+offset_bottom = 113.0
+text = "INVENTORY"
+
+[node name="HatBeretInventory" type="TextureButton" parent="."]
+offset_left = 228.0
+offset_top = 122.0
+offset_right = 260.0
+offset_bottom = 156.0
+scale = Vector2(1.20466, 1.34737)
+texture_normal = ExtResource("2_ufv3s")
+
+[node name="HatBowlInventory" type="TextureButton" parent="."]
+offset_left = 173.0
+offset_top = 124.0
+offset_right = 205.0
+offset_bottom = 156.0
+scale = Vector2(1.41287, 1.36)
+texture_normal = ExtResource("3_41n0w")

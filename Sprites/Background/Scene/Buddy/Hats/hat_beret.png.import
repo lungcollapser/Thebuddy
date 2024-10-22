@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u63ipxrni6gn"
-path="res://.godot/imported/hat_beret.png-ac2426dae819390a741b10a0b6a5e42b.ctex"
+path="res://.godot/imported/hat_beret.png-1a2e1eaf46726aa73da265177c592773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buddy/Hats/hat_beret.png"
-dest_files=["res://.godot/imported/hat_beret.png-ac2426dae819390a741b10a0b6a5e42b.ctex"]
+source_file="res://Sprites/Background/Scene/Buddy/Hats/hat_beret.png"
+dest_files=["res://.godot/imported/hat_beret.png-1a2e1eaf46726aa73da265177c592773.ctex"]
 
 [params]
 

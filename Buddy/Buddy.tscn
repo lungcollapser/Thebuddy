@@ -1,7 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://ca1uerg8uy26a"]
 
 [ext_resource type="Script" path="res://Buddy/Scripts/Buddy.gd" id="1_crrf2"]
-[ext_resource type="Texture2D" uid="uid://dy4n7iew8up18" path="res://Sprites/Buddy/buddy_anim.png" id="2_unohm"]
+[ext_resource type="Texture2D" uid="uid://dy4n7iew8up18" path="res://Sprites/Background/Scene/Buddy/buddy_anim.png" id="2_unohm"]
+[ext_resource type="Texture2D" uid="uid://u63ipxrni6gn" path="res://Sprites/Background/Scene/Buddy/Hats/hat_beret.png" id="3_2y0lr"]
 
 [sub_resource type="Animation" id="Animation_mtok8"]
 resource_name = "HandsUp"
@@ -114,10 +115,7 @@ _data = {
 "jump": SubResource("Animation_wvv8l")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cnupf"]
-radius = 24.3311
-
-[node name="Buddy" type="CharacterBody2D"]
+[node name="Buddy" type="CharacterBody2D" groups=["Buddy"]]
 position = Vector2(438, 171)
 script = ExtResource("1_crrf2")
 
@@ -138,6 +136,7 @@ libraries = {
 }
 
 [node name="Buddy1Shape" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
 shape = SubResource("CircleShape2D_aocr4")
 
 [node name="JumpAnimation" type="AnimationPlayer" parent="."]
@@ -195,13 +194,11 @@ offset_bottom = -17.0
 text = "Im full now, 
 thank you:3"
 
-[node name="PokeArea" type="Area2D" parent="."]
-
-[node name="PokeShape" type="CollisionShape2D" parent="PokeArea"]
-shape = SubResource("CircleShape2D_cnupf")
+[node name="HatBeret" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -5)
+scale = Vector2(1.53125, 1.5)
+texture = ExtResource("3_2y0lr")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Hunger75" method="_on_timer_timeout"]
-[connection signal="area_entered" from="PokeArea" to="." method="_on_poke_area_area_entered"]
-[connection signal="mouse_entered" from="PokeArea" to="." method="_on_poke_area_mouse_entered"]
-[connection signal="mouse_exited" from="PokeArea" to="." method="_on_poke_area_mouse_exited"]

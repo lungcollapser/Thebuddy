@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hv6s404grnc8"
-path="res://.godot/imported/hat_bowl_store.png-b851e089639e7940824e1f46eaf85216.ctex"
+uid="uid://py5be2ugmvxn"
+path="res://.godot/imported/hat_beret_store.png-0de0bb985436d21254d4ead9a732d5db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buddy/Hats/Store/hat_bowl_store.png"
-dest_files=["res://.godot/imported/hat_bowl_store.png-b851e089639e7940824e1f46eaf85216.ctex"]
+source_file="res://Sprites/Background/Scene/Buddy/Hats/Store/hat_beret_store.png"
+dest_files=["res://.godot/imported/hat_beret_store.png-0de0bb985436d21254d4ead9a732d5db.ctex"]
 
 [params]
 
