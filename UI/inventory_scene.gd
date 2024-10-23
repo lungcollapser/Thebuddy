@@ -36,3 +36,11 @@ func _on_hat_bowl_inventory_button_down():
 	elif hat_buddy_check == true:
 		hat_buddy_check = false
 		hat_bowl_buddy.visible = false
+
+
+#Possible fix for these code conditions. Test later
+#if hat_beret_buddy == false and hat_buddy_check == false:
+#		hat_beret_buddy.visible = true
+#		hat_buddy_check = true
+#	else: 
+#		hat_beret_buddy.visible = false

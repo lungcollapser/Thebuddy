@@ -6,7 +6,11 @@ func _ready():
 	inventory = get_tree().get_nodes_in_group("Inventory")[0]
 
 func _on_button_down():
-	inventory.visible = true
+	if inventory.visible == false:
+		inventory.visible = true
+	else:
+		inventory.visible = false
+	
 
 
 func _on_mouse_entered():
