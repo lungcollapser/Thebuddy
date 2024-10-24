@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxbwpweyhypxg"]
+
+[sub_resource type="GDScript" id="GDScript_xe3g7"]
+script/source = "extends ProgressBar
+
+var buddy 
+
+func _ready() -> void:
+	buddy = get_tree().get_nodes_in_group(\"Buddy\")
+	
+func _physics_process(delta: float) -> void:
+	if buddy.hunger_meter >= 0:
+		value += 1
+"
+
+[node name="CoinsBar" type="ProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -601.0
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_xe3g7")

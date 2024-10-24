@@ -1,4 +1,6 @@
 extends Node2D
+
+
 var hat_beret_buddy
 var hat_bowl_buddy
 

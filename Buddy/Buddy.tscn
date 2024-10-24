@@ -75,7 +75,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_m0nbo"]
 resource_name = "IdleAnimation"
-length = 1.3645
+length = 2.3625
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -198,7 +198,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_aocr4"]
 radius = 24.0208
 
-[node name="Buddy" type="CharacterBody2D"]
+[node name="Buddy" type="CharacterBody2D" groups=["Buddy"]]
 position = Vector2(438, 171)
 script = ExtResource("1_crrf2")
 

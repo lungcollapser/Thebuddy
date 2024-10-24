@@ -1,5 +1,5 @@
 extends TextureButton
-
+class_name HatBeretInv
 
 func _on_mouse_entered():
 	Events.emit_signal("call_bounce_start")
