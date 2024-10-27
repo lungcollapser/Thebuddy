@@ -4,13 +4,16 @@
 script/source = "extends ProgressBar
 
 var buddy 
+var coin_value = 0;
 
 func _ready() -> void:
-	buddy = get_tree().get_nodes_in_group(\"Buddy\")
+	buddy = get_tree().get_nodes_in_group(\"Buddy\")[0]
 	
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float):
 	if buddy.hunger_meter >= 0:
-		value += 1
+		coin_value = value
+		coin_value += 1
+		print(coin_value)
 "
 
 [node name="CoinsBar" type="ProgressBar"]

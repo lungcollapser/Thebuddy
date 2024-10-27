@@ -110,15 +110,15 @@ offset_right = 51.845
 offset_bottom = 45.41
 scale = Vector2(1.25, 1.25)
 
-[node name="CoinsBar" parent="UI_Buttons/CanvasLayer" instance=ExtResource("5_idx21")]
-offset_left = 557.0
-offset_top = 56.0
-offset_right = -51.0
-offset_bottom = -397.0
-script = ExtResource("6_ljrcu")
-
 [node name="Buddy" type="Node2D" parent="."]
 position = Vector2(1, -21)
+
+[node name="CoinsBar" parent="Buddy" instance=ExtResource("5_idx21")]
+offset_left = 236.0
+offset_top = -163.0
+offset_right = 265.0
+offset_bottom = -136.0
+script = ExtResource("6_ljrcu")
 
 [node name="Area2D" type="StaticBody2D" parent="Buddy"]
 position = Vector2(-1, 21)
