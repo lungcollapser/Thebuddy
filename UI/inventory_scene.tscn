@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://byad5pag8gmpf"]
 
-[ext_resource type="Script" path="res://UI/Scripts/inventory_scene.gd" id="1_8rsgx"]
 [ext_resource type="Texture2D" uid="uid://dudrix5uq0vkw" path="res://Sprites/Background/Scene/tamagotchi_background_screen_by_matiasbloodbones_df55ap7-pre.jpg" id="1_w2lry"]
+[ext_resource type="Script" path="res://UI/grid_container.gd" id="2_a32nt"]
 [ext_resource type="Texture2D" uid="uid://u63ipxrni6gn" path="res://Sprites/Background/Scene/Buddy/Hats/hat_beret.png" id="2_ufv3s"]
 [ext_resource type="Texture2D" uid="uid://cyxiygp5g83jk" path="res://Sprites/Background/Scene/Buddy/Hats/hat_bowl.png" id="3_41n0w"]
 [ext_resource type="Script" path="res://UI/Scripts/hat_beret_inventory.gd" id="4_4jrfh"]
@@ -11,7 +11,6 @@
 blend_mode = 3
 
 [node name="InventoryScene" type="Node2D" groups=["Inventory"]]
-script = ExtResource("1_8rsgx")
 
 [node name="TamagotchiBackgroundScreenByMatiasbloodbonesDf55Ap7-pre" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_wj3dk")
@@ -26,31 +25,29 @@ offset_right = 267.0
 offset_bottom = 113.0
 text = "INVENTORY"
 
-[node name="HatBowlInventory" type="TextureButton" parent="." groups=["hatbowlinv"]]
+[node name="HatInventory" type="GridContainer" parent="."]
+offset_left = 169.0
+offset_top = 118.0
+offset_right = 274.0
+offset_bottom = 274.0
+columns = 2
+script = ExtResource("2_a32nt")
+
+[node name="HatBowlInventory" type="TextureButton" parent="HatInventory" groups=["hatbowlinv"]]
 visible = false
-offset_left = 173.0
-offset_top = 124.0
-offset_right = 205.0
-offset_bottom = 156.0
-scale = Vector2(1.41287, 1.36)
+layout_mode = 2
 texture_normal = ExtResource("3_41n0w")
 script = ExtResource("6_tlppu")
 
-[node name="HatBeretInvNode" type="Node2D" parent="." groups=["hatberetinv"]]
+[node name="HatBeretInventory" type="TextureButton" parent="HatInventory" groups=["hatberetinv"]]
 visible = false
-
-[node name="HatBeretInventory" type="TextureButton" parent="HatBeretInvNode"]
-offset_left = 228.0
-offset_top = 122.0
-offset_right = 260.0
-offset_bottom = 154.0
-scale = Vector2(1.20466, 1.34737)
+layout_mode = 2
 texture_normal = ExtResource("2_ufv3s")
 script = ExtResource("4_4jrfh")
 
-[connection signal="button_down" from="HatBowlInventory" to="." method="_on_hat_bowl_inventory_button_down"]
-[connection signal="mouse_entered" from="HatBowlInventory" to="HatBowlInventory" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="HatBowlInventory" to="HatBowlInventory" method="_on_mouse_exited"]
-[connection signal="button_down" from="HatBeretInvNode/HatBeretInventory" to="." method="_on_hat_beret_inventory_button_down"]
-[connection signal="mouse_entered" from="HatBeretInvNode/HatBeretInventory" to="HatBeretInvNode/HatBeretInventory" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="HatBeretInvNode/HatBeretInventory" to="HatBeretInvNode/HatBeretInventory" method="_on_mouse_exited"]
+[connection signal="button_down" from="HatInventory/HatBowlInventory" to="." method="_on_hat_bowl_inventory_button_down"]
+[connection signal="mouse_entered" from="HatInventory/HatBowlInventory" to="HatInventory/HatBowlInventory" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HatInventory/HatBowlInventory" to="HatInventory/HatBowlInventory" method="_on_mouse_exited"]
+[connection signal="button_down" from="HatInventory/HatBeretInventory" to="." method="_on_hat_beret_inventory_button_down"]
+[connection signal="mouse_entered" from="HatInventory/HatBeretInventory" to="HatInventory/HatBeretInventory" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HatInventory/HatBeretInventory" to="HatInventory/HatBeretInventory" method="_on_mouse_exited"]
