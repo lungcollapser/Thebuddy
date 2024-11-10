@@ -34,13 +34,11 @@ columns = 2
 script = ExtResource("2_a32nt")
 
 [node name="HatBowlInventory" type="TextureButton" parent="HatInventory" groups=["hatbowlinv"]]
-visible = false
 layout_mode = 2
 texture_normal = ExtResource("3_41n0w")
 script = ExtResource("6_tlppu")
 
 [node name="HatBeretInventory" type="TextureButton" parent="HatInventory" groups=["hatberetinv"]]
-visible = false
 layout_mode = 2
 texture_normal = ExtResource("2_ufv3s")
 script = ExtResource("4_4jrfh")
